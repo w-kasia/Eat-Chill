@@ -1,0 +1,9 @@
+input {
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+button {
+  background: orangered;
+  color: white;
+  margin-top: 15px;
+}
