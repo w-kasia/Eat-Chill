@@ -1,29 +1,33 @@
 <div class="container">
   <div class="row row-cols-2 align-items-center">
-    <form>
-      <div class="col-8">
-        <label for="inputName" class="form-label">Name</label>
-        <input type="text" class="form-control" id="inputName">
+    <form (ngSubmit)="onSubmit(f)" #f=ngForm>
+      <div id="client-message" ngModelGroup="clientMessage" #clientMessage>
+        <div class="col-8">
+          <label for="inputName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="inputName" ngModel name="name" required>
+        </div>
+        <div class="col-8">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" ngModel name="email" required email #email="ngModel">
+          <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+        </div>
+        <div class="col-8">
+          <label for="inputPhone" class="form-label">Phone</label>
+          <input type="text" class="form-control" id="inputPhone" ngModel name="phone" required>
+        </div>
+        <div class="col-8">
+          <label for="inputTitle" class="form-label">Title</label>
+          <input type="text" class="form-control" id="inputTitle" ngModel name="title" requried>
+        </div>
+        <div class="col-8">
+          <label for="inputMessage" class="form-label">Write Message</label>
+          <textarea class="form-control" id="inputMessage" rows="3" ngModel name="message" required></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+        </div>
       </div>
-      <div class="col-8">
-        <label for="inputEmail" class="form-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail">
-      </div>
-      <div class="col-8">
-        <label for="inputPhone" class="form-label">Phone</label>
-        <input type="text" class="form-control" id="inputPhone">
-      </div>
-      <div class="col-8">
-        <label for="inputTitle" class="form-label">Title</label>
-        <input type="text" class="form-control" id="inputTitle">
-      </div>
-      <div class="col-8">
-        <label for="inputMessage" class="form-label">Write Message</label>
-        <textarea class="form-control" id="inputMessage" rows="3"></textarea>
-      </div>
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
-      </div>
+
     </form>
     <div>
       <h1>Contact Details</h1>
