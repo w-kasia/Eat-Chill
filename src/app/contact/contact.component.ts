@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 export class ContactComponent {
 
   onSubmit(form: NgForm) {
-    console.log(form);
-
+    console.log(form.submitted);
+    form.resetForm();
   }
 }

@@ -1,9 +1,25 @@
-input {
+input, textarea {
   padding-bottom: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
+
 button {
   background: orangered;
   color: white;
   margin-top: 15px;
 }
+
+input.ng-invalid.ng-touched, 
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+input.ng-valid,
+textarea.ng-valid {
+  border: 1px solid green;
+}
+.help-block {
+  color: red;
+  font-size: 13px;
+} 
+
