@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -7,9 +8,11 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+ 
 
   onSubmit(form: NgForm) {
     console.log(form.submitted);
     form.resetForm();
+
   }
 }

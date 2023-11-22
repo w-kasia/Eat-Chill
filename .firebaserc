@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "restaurant-website-a9745": {
+      "hosting": {
+        "restaurant": [
+          "restaurant-website-a9745"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "restaurant-website-a9745"
+  }
+}
