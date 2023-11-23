@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,8 +12,29 @@
 
 .nav-link {
   color: wheat;
-}
+} */
 
 .navbar-brand {
   color: orangered;
+}
+
+
+/*
+.banner-image {
+  background-image: url('assets/images/bgimage.jpg');
+} */
+
+/* :root {
+  --navbar-scroll: transparent;
+  --navbar-scroll-text: white;
+  --navbar-scroll-shadow: none;
+} */
+
+ .homeBackgroundImage {
+  width: 100%;
+}
+
+.navbar-inverse {
+  background: black;
+  transition: background-color 1s ease;
 }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg">
+<!-- <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
       aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,10 +22,49 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
-      </ul>
-      <!-- <form class="container-fluid">
+      </ul> -->
+<!-- <form class="container-fluid">
         <button class="btn btn-outline-success me-2" type="button">Contact</button>
       </form> -->
+<!-- </div>
+  </div>
+</nav> -->
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" (scroll)="onWindowScroll()">
+  <div class="container">
+    <a href="#" class="navbar-brand">Hello burgers</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reservation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
+
+<div class="banner-image d-flex justify-content-center align-items-center">
+  <img class="img-fluid" class="homeBackgroundImage" [src]="homeBackgroundImage" alt="">
+  <div class="content text-center">
+    <h1></h1>
+  </div>
+</div>
