@@ -1,0 +1,13 @@
+.container {
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+.ng-invalid
+.ng-touched {
+  border: 1px solid red;
+}
+
+.help-block {
+  color: red;
+}

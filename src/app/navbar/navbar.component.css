@@ -14,23 +14,7 @@
   color: wheat;
 } */
 
-.navbar-brand {
-  color: orangered;
-}
-
-
-/*
-.banner-image {
-  background-image: url('assets/images/bgimage.jpg');
-} */
-
-/* :root {
-  --navbar-scroll: transparent;
-  --navbar-scroll-text: white;
-  --navbar-scroll-shadow: none;
-} */
-
- .homeBackgroundImage {
+.homeBackgroundImage {
   width: 100%;
 }
 
@@ -38,3 +22,14 @@
   background: black;
   transition: background-color 1s ease;
 }
+.navbar-brand {
+  font-size: 32px;
+  color: var(--orange);
+}
+
+ .navbar-item
+ .navbar-link {
+  font-size: 20px;
+  color: #fff;
+}
+

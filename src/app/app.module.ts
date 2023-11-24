@@ -13,7 +13,7 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { ErrorComponent } from './error/error.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TeamComponent } from './team/team.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
@@ -59,6 +59,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
