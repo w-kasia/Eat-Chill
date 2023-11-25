@@ -3,11 +3,22 @@
   max-width: 100vw;
 }
 
-.ng-invalid
-.ng-touched {
+input.ng-invalid.ng-touched {
   border: 1px solid red;
+}
+
+input.ng-valid {
+  border: 1px solid green;
 }
 
 .help-block {
   color: red;
+}
+
+select.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+select.ng-valid {
+  border: 1px solid green;
 }
