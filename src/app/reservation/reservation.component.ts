@@ -1,4 +1,5 @@
 
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -9,6 +10,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ReservationComponent implements OnInit{
 
+  constructor(private datePipe: DatePipe) {}
+
   reservationForm!: FormGroup;
 
   occasions: any = ['Eat & Chill', 'Birthday', 'Annivarsary'];
@@ -16,9 +19,11 @@ export class ReservationComponent implements OnInit{
 
   // maxDate: any = '2024-01-01';
 
+  //czas nie działa w firefox, poprawić
   currentDate: any = new Date();
-  currentTime: any = this.currentDate.getHours() + ":" + this.currentDate.getMinutes() + ":" + this.currentDate.getSeconds();
+  // currentTime: any = this.currentDate.getHours() + ":" + this.currentDate.getMinutes();
 
+  currentTime: any = this.currentDate;
 
   ngOnInit() {
     this.reservationForm = new FormGroup({
@@ -29,6 +34,7 @@ export class ReservationComponent implements OnInit{
       }),
       'reservationDetails': new FormGroup({
         'date': new FormControl(null, Validators.required),
+        'time': new FormControl(null, Validators.required),
         'numbers': new FormControl(null, Validators.required),
         'occasions': new FormControl(null, Validators.required),
         'message': new FormControl(null)
@@ -41,6 +47,8 @@ export class ReservationComponent implements OnInit{
 
   onSubmit() {
     //dodać reset
+    console.log('Form Submiited');
+    this.reservationForm.reset();
   }
 
  

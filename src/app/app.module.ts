@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TeamComponent } from './team/team.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { DatePipe } from '@angular/common';
+import { FaqComponent } from './faq/faq.component';
+
 // import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 // import { getFirestore, provideFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 
@@ -42,16 +45,18 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 @NgModule({
   declarations: [
     AppComponent,
+    routingComponents,
     HomeComponent,
-    ContactComponent,
-    MenuComponent,
+    // ContactComponent,
+    // MenuComponent,
     AboutComponent,
-    ReservationComponent,
-    ErrorComponent,
+    // ReservationComponent,
+    // ErrorComponent,
     FooterComponent,
     NavbarComponent,
     TeamComponent,
     TestimonialsComponent
+    // FaqComponent
 
   ],
   imports: [
@@ -62,7 +67,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

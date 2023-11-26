@@ -35,7 +35,8 @@
         <label for="date" class="form-label">Date & Time</label>
         <input type="date" class="form-control" id="date" formControlName="date"
           min="{{currentDate | date: 'yyyy-MM-dd'}}">
-        <input type="time" class="form-control" id="time" formControlName="time" min="{{currentTime | date: 'h:mm a'}}">
+        <input type="time" class="form-control" id="time" formControlName="time"
+          min="{{currentTime | date: 'shortTime'}}">
         <span
           *ngIf="!reservationForm.get('reservationDetails.date')?.valid && reservationForm.get('reservationDetails.date')?.touched"
           class="help-block">Please choose date and time
