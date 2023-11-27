@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  homeBackgroundImage = 'assets/images/bgimage.jpg';
+  // homeBackgroundImage = 'assets/images/bgimage.jpg';
 }

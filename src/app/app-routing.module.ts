@@ -16,9 +16,11 @@ const routes: Routes = [
   // { path: '**', component: ErrorComponent}
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
 export const routingComponents = [HomeComponent,FaqComponent, ContactComponent, ReservationComponent, MenuComponent];
+

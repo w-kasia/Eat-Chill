@@ -6,7 +6,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  homeBackgroundImage = 'assets/images/bgimage.jpg';
+  homeBackgroundImage = 'assets/images/background-nav.jpg';
 
 
   // ngOnInit(): void {

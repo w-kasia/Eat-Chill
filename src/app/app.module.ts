@@ -19,6 +19,7 @@ import { TeamComponent } from './team/team.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { DatePipe } from '@angular/common';
 import { FaqComponent } from './faq/faq.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 // import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 // import { getFirestore, provideFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
@@ -46,7 +47,6 @@ import { FaqComponent } from './faq/faq.component';
   declarations: [
     AppComponent,
     routingComponents,
-    HomeComponent,
     // ContactComponent,
     // MenuComponent,
     AboutComponent,
@@ -55,7 +55,8 @@ import { FaqComponent } from './faq/faq.component';
     FooterComponent,
     NavbarComponent,
     TeamComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    GalleryComponent
     // FaqComponent
 
   ],

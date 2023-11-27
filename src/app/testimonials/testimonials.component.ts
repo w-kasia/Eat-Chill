@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -6,15 +6,23 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.css']
 })
-export class TestimonialsComponent {
+export class TestimonialsComponent implements OnInit {
 testimonials: any[] = [];
 
-constructor(private http: HttpClient) {
-  this.fetchTestimonials();
-}
+// constructor(private http: HttpClient) {
+//   this.fetchTestimonials();
+// }
 
-fetchTestimonials() {
-  this.http.get<any[]>('assets/data.json').subscribe(data => {
+// fetchTestimonials() {
+//   this.http.get<any[]>('assets/data.json').subscribe(data => {
+//     this.testimonials = data;
+//   });
+// }
+
+constructor(private http: HttpClient) {}
+
+ngOnInit(): void {
+  this.http.get<any[]>('/assets/testimonials.json').subscribe(data => {
     this.testimonials = data;
   });
 }

@@ -1,0 +1,11 @@
+.imageOfDish {
+  width: 400px;
+  height: 550px;
+  border-radius: 10px;
+}
+
+
+.imageOfDish:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}

@@ -1,0 +1,16 @@
+.menuOption {
+  background-color: var(--orange);
+  max-width: 300px;
+}
+
+.menuItems
+ {
+  background-color: red;
+  margin-top: 100px;
+  position: fixed;
+  top: 100px;
+  left: 50px;
+  z-index: 999;
+ }
+
+

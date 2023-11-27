@@ -3,9 +3,9 @@
     <h1>Testimonials</h1>
     <h2>Happy Customers</h2>
   </div>
-  <div class="carousel-slide" data-ride="carousel" id="testimonialCarousel" data-interval="false">
+  <div class="carousel-slide" data-ride="carousel" id="testimonialCarousel">
     <div class="carousel-inner">
-      <div class="carousel-item" *ngFor="let testimonial of testimonials; let i = index">
+      <div class="carousel-item" *ngFor="let testimonial of testimonials">
         <div>
           <p>{{testimonial.text}}</p>
         </div>
