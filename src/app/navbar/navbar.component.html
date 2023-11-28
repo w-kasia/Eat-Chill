@@ -64,11 +64,18 @@
       </ul>
     </div>
   </div>
+
 </nav>
 
-<div class="banner-image d-flex justify-content-center align-items-center">
+<div class="banner-image d-flex justify-content-center align-items-center bgImageContainer">
   <img class="img-fluid" class="homeBackgroundImage" [src]="homeBackgroundImage" alt="">
-  <div class="content text-center">
-    <h1></h1>
+  <div class="welcome-text d-flex justify-content-center align-items-center">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center text-white">Hello in our restaurant!</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, iusto?</h2>
+        <button (click)="goToReservation()">Book a table</button>
+      </div>
+    </div>
   </div>
 </div>

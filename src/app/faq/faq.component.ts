@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent {
-
+  imgFaqSection = 'assets/images/img-faq.jpg';
 }

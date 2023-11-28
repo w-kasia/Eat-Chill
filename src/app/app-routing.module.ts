@@ -12,8 +12,8 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'reservation', component: ReservationComponent},
-  { path: 'menu', component: MenuComponent}
-  // { path: '**', component: ErrorComponent}
+  { path: 'menu', component: MenuComponent},
+  { path: '**', component: ErrorComponent}
 ];
 
 
