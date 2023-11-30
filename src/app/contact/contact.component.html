@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row row-cols-2 align-items-center">
-    <form (ngSubmit)="onSubmit(f)" #f=ngForm>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
       <div class="col-8">
         <label for="inputName" class="form-label">Name</label>
         <input type="text" class="form-control" id="inputName" ngModel name="name" required #name="ngModel">
@@ -15,8 +15,8 @@
       </div>
       <div class="col-8">
         <label for="inputPhone" class="form-label">Phone</label>
-        <input type="tel" class="form-control" id="inputPhone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" ngModel name="phone"
-          required #phone="ngModel">
+        <input type="tel" class="form-control" id="inputPhone" ngModel name="phone" pattern="[0-9]{9}" required
+          #phone="ngModel">
         <span class="help-block" *ngIf="!phone.valid && phone.touched">Please enter a valid phone number!</span>
       </div>
       <div class="col-8">

@@ -20,28 +20,35 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { DatePipe } from '@angular/common';
 import { FaqComponent } from './faq/faq.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';        
+import { getAuth, provideAuth } from '@angular/fire/auth';        
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';        
+import { getStorage, provideStorage } from '@angular/fire/storage';        
+import { getAnalytics, provideAnalytics } from '@angular/fire/analytics';        
+
+import { environment } from '../environments/environment';         
 
 // import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-// import { getFirestore, provideFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBKE2TEyOQoVsBP961Qg5o35fWrHnKJh04",
 
-//   authDomain: "restaurant-website-a9745.firebaseapp.com",
+const firebaseConfig = {
+  apiKey: "AIzaSyBKE2TEyOQoVsBP961Qg5o35fWrHnKJh04",
 
-//   databaseURL: "https://restaurant-website-a9745-default-rtdb.firebaseio.com",
+  authDomain: "restaurant-website-a9745.firebaseapp.com",
 
-//   projectId: "restaurant-website-a9745",
+  databaseURL: "https://restaurant-website-a9745-default-rtdb.firebaseio.com",
 
-//   storageBucket: "restaurant-website-a9745.appspot.com",
+  projectId: "restaurant-website-a9745",
 
-//   messagingSenderId: "172598582903",
+  storageBucket: "restaurant-website-a9745.appspot.com",
 
-//   appId: "1:172598582903:web:d5aa572f2ee61176cff072",
+  messagingSenderId: "172598582903",
 
-//   measurementId: "G-LWX885J2D6"
-//   }
+  appId: "1:172598582903:web:d5aa572f2ee61176cff072",
+
+  measurementId: "G-LWX885J2D6"
+  }
 
 @NgModule({
   declarations: [
@@ -61,12 +68,16 @@ import { GalleryComponent } from './gallery/gallery.component';
 
   ],
   imports: [
+
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideFirestore(() => getFirestore()),
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

@@ -1,9 +1,41 @@
-<div class="container justify-content-center align-items-center mt-4 mb-4">
+<!-- <div class="container justify-content-center align-items-center mt-4 mb-4">
   <div class="row g-2">
     <div class="col-4" *ngFor="let image of images">
       <div class="image-container p-3">
-        <img class="imageOfDish" src="assets/images/gallery/{{image}}" alt="">
+        <img " class="imageOfDish" src="assets/images/gallery/{{image}}" alt="">
       </div>
+    </div>
+  </div>
+
+</div> -->
+
+<div class="container justify-content-center align-items-center mt-4 mb-4">
+  <div class="row g-2">
+    <div class="col-4" *ngFor="let image of images; let i = index">
+      <div class="image-container p-3">
+        <img (click)="onPreviewImage(i)" class="imageOfDish" src="assets/images/gallery/{{image}}" alt="">
+      </div>
+    </div>
+    <div *ngIf="showMask" class="lightbox">
+      <button (click)="closePreview()" *ngIf="previewImage" class="close-btn">
+        <img src="assets/icon-close.svg" alt="">
+      </button>
+
+      <button *ngIf="controls" class="carousel-control-prev btn-control" type="button" data-bs-slide="prev"
+        (click)="goToPrev()">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next btn-control" type="button" data-bs-slide="next" (click)="goToNext()">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <div *ngIf="previewImage" class="lightbox-img">
+        <img class="img-preview" src="assets/images/gallery/{{currentLightboxImage}}" alt="">
+      </div>
+
     </div>
   </div>
 
