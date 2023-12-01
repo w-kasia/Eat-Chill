@@ -28,6 +28,8 @@
       <div class="col-12">
         <button type="submit" class="btn btn-primary" [disabled]="!f.valid">SEND MESSAGE</button>
       </div>
+      
+      <p *ngIf="isSubmit" class="submitMessage">{{submitMessage}}</p>
 
 
     </form>

@@ -57,7 +57,7 @@ const firebaseConfig = {
     // ContactComponent,
     // MenuComponent,
     AboutComponent,
-    // ReservationComponent,
+    ReservationComponent,
     // ErrorComponent,
     FooterComponent,
     NavbarComponent,
@@ -71,6 +71,7 @@ const firebaseConfig = {
 
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideFirestore(() => getFirestore()),
+   
     BrowserModule,
     AppRoutingModule,
     NgbModule,
@@ -79,7 +80,7 @@ const firebaseConfig = {
     HttpClientModule,
     
   ],
-  providers: [DatePipe],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,24 +9,31 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+
+  isSubmit = true;
+  submitMessage = '';
+
  firestore: Firestore = inject(Firestore);
 
- @ViewChild('f') messageForm: any;
+ @ViewChild('f') contactForm: any;
 
   saveData(): void {
     const acollection = collection(this.firestore, 'client');
     addDoc(acollection, {
-      'name': this.messageForm.value.name,
-      'email': this.messageForm.value.email,
-      'phone': this.messageForm.value.phone,
-      'message': this.messageForm.value.message
+      'name': this.contactForm.value.name,
+      'email': this.contactForm.value.email,
+      'phone': this.contactForm.value.phone,
+      'message': this.contactForm.value.message
     })
    }
 
    onSubmit(form: NgForm) {
-    console.log(form.submitted);
+    this.isSubmit = true;
+    this.submitMessage = 'Message send successfully';
     this.saveData();
     form.resetForm();
-
+    setTimeout(() => {
+        this.isSubmit = false;
+      }, 4000)
   }
 }

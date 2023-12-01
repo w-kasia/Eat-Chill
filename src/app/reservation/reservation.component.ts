@@ -1,7 +1,7 @@
-
-import { DatePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Firestore } from '@angular/fire/firestore';
+import { addDoc, collection } from 'firebase/firestore';
 
 @Component({
   selector: 'app-reservation',
@@ -10,12 +10,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ReservationComponent implements OnInit{
 
-  constructor(private datePipe: DatePipe) {}
-
   reservationForm!: FormGroup;
 
   occasions: any = ['Eat & Chill', 'Birthday', 'Annivarsary'];
   numbers: any = ['1', '2', '3', '4', '5'];
+
+  isSubmit = true;
+  submitMessage = '';
 
   // maxDate: any = '2024-01-01';
 
@@ -28,28 +29,44 @@ export class ReservationComponent implements OnInit{
   ngOnInit() {
     this.reservationForm = new FormGroup({
       'clientData': new FormGroup({
-        'name': new FormControl(null, Validators.required),
-        'email': new FormControl(null, [Validators.required, Validators.email]),
-        'phone': new FormControl(null, [Validators.required, Validators.pattern('[0-9]{9}')])
+        'name': new FormControl('', Validators.required),
+        'email': new FormControl('', [Validators.required, Validators.email]),
+        'phone': new FormControl('', [Validators.required, Validators.pattern('[0-9]{9}')])
       }),
       'reservationDetails': new FormGroup({
-        'date': new FormControl(null, Validators.required),
-        'time': new FormControl(null, Validators.required),
-        'numbers': new FormControl(null, Validators.required),
-        'occasions': new FormControl(null, Validators.required),
-        'message': new FormControl(null)
+        'date': new FormControl('', Validators.required),
+        'time': new FormControl('', Validators.required),
+        'numbers': new FormControl('', Validators.required),
+        'occasions': new FormControl('', Validators.required),
+        'message': new FormControl('')
       })
-
     });
   }
 
+  firestore: Firestore = inject(Firestore);
 
+  saveData(): void {
+    const acollection = collection(this.firestore, 'reservation');
 
-  onSubmit() {
-    //dodać reset
-    console.log('Form Submiited');
-    this.reservationForm.reset();
+    addDoc(acollection, {
+      'name': this.reservationForm.value.clientData.name,
+      'email': this.reservationForm.value.clientData.email,
+      'phone': this.reservationForm.value.clientData.phone,
+      'date': this.reservationForm.value.reservationDetails.date,
+      'time': this.reservationForm.value.reservationDetails.time,
+      'numbers': this.reservationForm.value.reservationDetails.numbers,
+      'occasions': this.reservationForm.value.reservationDetails.occasions,
+      'message': this.reservationForm.value.reservationDetails.message
+    })
   }
 
- 
+  onSubmit() {
+    this.isSubmit = true;
+    this.submitMessage = 'Message send successfully';
+    this.saveData();
+    this.reservationForm.reset();
+    setTimeout(() => {
+      this.isSubmit = false;
+    }, 4000)
+  }
 }

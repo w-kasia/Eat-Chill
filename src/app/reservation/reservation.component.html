@@ -72,6 +72,8 @@
 
     <div class="col-12">
       <button class="btn btn-primary" type="submit" [disabled]="!reservationForm.valid">MAKE RESERVATION</button>
+
+      <p *ngIf="isSubmit" class="submitMessage">{{submitMessage}}</p>
     </div>
   </form>
 </div>

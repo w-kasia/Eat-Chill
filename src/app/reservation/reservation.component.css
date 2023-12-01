@@ -22,3 +22,7 @@ select.ng-invalid.ng-touched {
 select.ng-valid {
   border: 1px solid green;
 }
+
+.submitMessage {
+  color: green;
+}
