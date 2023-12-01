@@ -1,17 +1,36 @@
-<div class="container justify-content-center align-items-center text-center">
+<!-- <div class="container text-center">
   <div class="col">
+
     <h1>Testimonials</h1>
     <h2>Happy Customers</h2>
-  </div>
-  <div class="carousel-slide" data-ride="carousel" id="testimonialCarousel">
-    <div class="carousel-inner">
-      <div class="carousel-item" *ngFor="let testimonial of testimonials">
-        <div>
-          <p>{{testimonial.text}}</p>
-        </div>
-
-
+    <div class="row justify-content-center align-items-center">
+      <div class="testimonial" *ngFor="let testimonial of testimonials; let i = index">
+        <p>{{testimonial.text}}</p>
+        <p>{{testimonial.name}}</p>
       </div>
     </div>
+  </div>
+</div> -->
+
+
+
+<div id="carouselTestimonials" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item testimonial" *ngFor="let testimonial of testimonials; let i = index" data-bs-interval="3000"
+      [ngClass]="{'active': i === 0}">
+      <div class="carousel-caption">
+        <h1>{{testimonial.text}}</h1>
+        <p>{{testimonial.name}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="0" class="active" aria-current="true"
+      aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="5" aria-label="Slide 6"></button>
   </div>
 </div>

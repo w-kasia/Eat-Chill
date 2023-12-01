@@ -2,6 +2,7 @@
   min-height: 100vh;
 }
 
-.middle-div {
-  background-color: var(--orange);
+.testimonial {
+  max-width: 400px;
+ height: 300px;
 }
