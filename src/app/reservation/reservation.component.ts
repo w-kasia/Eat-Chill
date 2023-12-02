@@ -12,8 +12,7 @@ export class ReservationComponent implements OnInit{
 
   reservationForm!: FormGroup;
 
-  occasions: any = ['Eat & Chill', 'Birthday', 'Annivarsary'];
-  numbers: any = ['1', '2', '3', '4', '5'];
+  occasions: string[] = ['Eat & Chill', 'Birthday', 'Annivarsary', 'Business meeting'];
 
   isSubmit = true;
   submitMessage = '';
@@ -24,7 +23,7 @@ export class ReservationComponent implements OnInit{
   currentDate: any = new Date();
   // currentTime: any = this.currentDate.getHours() + ":" + this.currentDate.getMinutes();
 
-  currentTime: any = this.currentDate;
+  // currentTime: any = this.currentDate;
 
   ngOnInit() {
     this.reservationForm = new FormGroup({

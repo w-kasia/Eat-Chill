@@ -21,5 +21,4 @@ export class MenuComponent {
     this.activeOptionIndex = index;
   }
 
-
 }

@@ -35,20 +35,19 @@
         <label for="date" class="form-label">Date & Time</label>
         <input type="date" class="form-control" id="date" formControlName="date"
           min="{{currentDate | date: 'yyyy-MM-dd'}}">
-        <input type="time" class="form-control" id="time" formControlName="time"
-          min="{{currentTime | date: 'shortTime'}}">
+        <!-- <input type="time" class="form-control" id="time" formControlName="time"
+          min="{{currentTime | date: 'shortTime'}}" > -->
+        <input type="time" class="form-control" id="time" formControlName="time">
         <span
           *ngIf="!reservationForm.get('reservationDetails.date')?.valid && reservationForm.get('reservationDetails.date')?.touched"
-          class="help-block">Please choose date and time
+          class="help-block">Please choose date and time(between 10-22)
         </span>
       </div>
 
       <div class="select col-md-6">
         <label for="guests" class="form-label">Number of people</label>
-        <select class="form-select" id="guests" aria-describedby="validationServer04Feedback" formControlName="numbers">
-          <option value="">Choose...</option>
-          <option value="number" *ngFor="let number of numbers">{{ number }}</option>
-        </select>
+        <input type="number" class="form-control" id="input1" placeholder="enter amount" max="6" min="1"
+          formControlName="numbers">
         <span
           *ngIf="!reservationForm.get('reservationDetails.numbers')?.valid && reservationForm.get('reservationDetails.numbers')?.touched"
           class="help-block">Please, choose number of guests</span>
@@ -58,7 +57,7 @@
         <select class="form-select" id="occasion" aria-describedby="validationServer04Feedback"
           formControlName="occasions">
           <option value="">Choose...</option>
-          <option value="occasion" *ngFor="let occasion of occasions">{{ occasion }}</option>
+          <option *ngFor="let occasion of occasions">{{occasion}}</option>
         </select>
         <span
           *ngIf="!reservationForm.get('reservationDetails.occasions')?.valid && reservationForm.get('reservationDetails.occasions')?.touched"
@@ -72,7 +71,6 @@
 
     <div class="col-12">
       <button class="btn btn-primary" type="submit" [disabled]="!reservationForm.valid">MAKE RESERVATION</button>
-
       <p *ngIf="isSubmit" class="submitMessage">{{submitMessage}}</p>
     </div>
   </form>

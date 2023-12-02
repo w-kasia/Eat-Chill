@@ -1,10 +1,9 @@
 :root {
   --white: #f9fcff;
   --orange: #f63e04;
-  --blue: #2B3499;
   --black-dark:  #0C090A;
-  --black-lighter: #1B1212;
-  --black-light: #1A1110;
+  --black-light: #1B1212;
+  --black-lighter: #1A1110;
   --grey: #454545;
   --primary-font: 'Tahoma', serif;
   --secondary-font: 'Calistoga', serif;
@@ -17,8 +16,8 @@
 }
 
 body {
-  background-color: #f9fcff;
+  background-color: var(--white);
   background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
-  font-family: var(--primary-font);
   color: var(--black-dark);
+  font-family: var(--primary-font);
 }

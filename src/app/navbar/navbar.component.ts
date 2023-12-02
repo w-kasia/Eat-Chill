@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  logo = 'assets/logo-restaurant.png';
   homeBackgroundImage = 'assets/images/background-nav.jpg';
 
   constructor(private router: Router) {}
@@ -25,6 +26,7 @@ onWindowScroll() {
       element.classList.remove('navbar-inverse');
     }
   }
+
 
 
 }

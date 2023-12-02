@@ -6,21 +6,22 @@ import { ContactComponent } from './contact/contact.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { MenuComponent } from './menu/menu.component';
 import { ErrorComponent } from './error/error.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'faq', component: FaqComponent},
-  { path: 'contact', component: ContactComponent},
-  { path: 'reservation', component: ReservationComponent},
+  { path: 'home', component: HomeComponent},
   { path: 'menu', component: MenuComponent},
+  { path: 'faq', component: FaqComponent},
+  { path: 'gallery', component: GalleryComponent},
+  { path: 'reservation', component: ReservationComponent},
+  { path: 'contact', component: ContactComponent},
   { path: '**', component: ErrorComponent}
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent,FaqComponent, ContactComponent, ReservationComponent, MenuComponent];
-
+export const routingComponents = [HomeComponent, MenuComponent, FaqComponent, GalleryComponent, ReservationComponent,  ContactComponent];
