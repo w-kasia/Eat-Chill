@@ -3,3 +3,22 @@
   color: var(--white);
   min-height: 50vh;
 }
+
+.footerIcon {
+  filter: invert(93%) sepia(43%) saturate(2654%) hue-rotate(180deg) brightness(111%) contrast(108%);
+}
+
+.contactList {
+  list-style: none;
+}
+
+.contactList a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.reservationButton {
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  homeBackgroundImage = 'assets/images/background-nav.jpg';
+  constructor(private router: Router) {}
 
+  goToReservation() {
+    this.router.navigate(['/reservation']);
+  }
 }

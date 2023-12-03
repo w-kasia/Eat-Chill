@@ -3,3 +3,11 @@
   width: 100vw;
   height: 200px;
  }
+/* 
+.navbar {
+  position: relative;
+  z-index: 1;
+} */
+.navigation {
+ margin-bottom: 100px;
+}

@@ -1,5 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-faq',
@@ -8,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class FaqComponent {
   imgFaqSection = 'assets/images/img-faq.jpg';
+
 }

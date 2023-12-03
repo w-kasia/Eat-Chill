@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  logo = 'assets/logo-restaurant.png';
-  homeBackgroundImage = 'assets/images/background-nav.jpg';
+  logo = 'assets/images/logo-restaurant.png';
+  // homeBackgroundImage = 'assets/images/background-nav.jpg';
 
   constructor(private router: Router) {}
 
@@ -26,7 +26,6 @@ onWindowScroll() {
       element.classList.remove('navbar-inverse');
     }
   }
-
 
 
 }
