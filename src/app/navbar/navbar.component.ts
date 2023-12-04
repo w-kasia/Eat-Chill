@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  logo = 'assets/images/logo-restaurant.png';
+  logo = 'assets/logo.png';
   // homeBackgroundImage = 'assets/images/background-nav.jpg';
 
   constructor(private router: Router) {}

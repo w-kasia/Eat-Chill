@@ -1,42 +1,48 @@
 <footer class="bottom">
-  <div class="container-fluid text-center text-md-start">
-    <div class="row">
-      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 ">
-        <h1 class="text-uppercase fw-bold mb-4">
-          Hello Burgers
-        </h1>
+  <div class="container d-flex align-items-center">
+    <div class="row justify-content-center">
+      <div class="col-4 mx-auto mb-4">
+        <div class="heading">
+          <img class="logo" src="assets/logo.png" alt="Logo of restaurant">
+        </div>
         <p>
-          Here you can use rows and columns to organize your footer content. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit.
+          An austere experience, where richness is lived through the purity of ingredients, the combination of
+          extraordinary flavors, and the story of their origin.
         </p>
       </div>
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-        <h2 class="text-uppercase fw-bold mb-4">
-          Opening Hours
-        </h2>
-        <p>Monday - Thursday<br>
-          11:00 AM - 9:00 PM</p>
+      <div class="col-3 mx-auto mb-4">
+        <div class="heading">
+          <p class="text-uppercase fw-bold mb-4">
+            Opening Hours
+          </p>
+        </div>
+
+        <p>Monday - Thursday</p>
+        <p>11:00 AM - 10:00 PM</p>
         <p>Friday - Saturday<br>
-          11:00 AM - 5:00 PM</p>
+        <p>11:00 AM - 3:00 PM</p>
       </div>
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-        <h3 class="text-uppercase fw-bold mb-4">
-          Contact
-        </h3>
-        <ul class="contactList">
-          <li><img class="footerIcon" src="assets/icon-address.svg" alt="address icon">Piękna 53, Warszawa</li>
-          <li><img class="footerIcon" src="assets/icon-phone.svg" alt="address icon"><a href="tel:+48555666777">+48 555
-              666 777</a></li>
-          <li><img class="footerIcon" src="assets/icon-email.svg" alt="address icon"><a
-              href="mailto:support@eatandchill.com">support@eatandchill.com</a></li>
-          <li><img class="footerIcon" src="assets/icon-form.svg" alt="address icon">
+      <div class="col-3 mx-auto mb-4">
+        <div class="heading">
+          <p class="text-uppercase fw-bold mb-4">
+            Contact
+          </p>
+        </div>
+
+        <div class="contactItems">
+          <p><img class="footerIcon" src="assets/icons/icon-address.svg" alt="address icon">ul. Piękna 53, Warsaw</p>
+          <p><img class="footerIcon" src="assets/icons/icon-phone.svg" alt="address icon"><a href="tel:+48555666777">+48
+              555 666 777</a></p>
+          <p><img class="footerIcon" src="assets/icons/icon-email.svg" alt="address icon"><a
+              href="mailto:support@eatandchill.com">support@eatandchill.com</a></p>
+          <p><img class="footerIcon" src="assets/icons/icon-form.svg" alt="address icon">
             <button class="reservationButton" (click)="goToReservation()">Book a table</button>
-          </li>
-        </ul>
+          </p>
+        </div>
       </div>
     </div>
   </div>
   <div class="text-center p-4">
-    © 2023 Copyright
+    <p>© 2023 Eat & Chill. All Rights Reserved.</p>
   </div>
 </footer>
