@@ -1,5 +1,4 @@
-
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent{
-  aboutImage = 'assets/images/burger-image.png';
+  burgerImage = 'assets/images/burger-image.png';
 //   startValue: number = 0;
 
 //   ngOnInit(): void {
@@ -24,8 +23,4 @@ export class AboutComponent{
 //   }, 200);
 // }
 
-
-
-
 }
-

@@ -2,12 +2,14 @@
   --white: #f9fcff;
   --orange: #f63e04;
   --green: #003e29;
+  --green-secondary: #bff47b;;
   --black-dark:  #0C090A;
   --black-light: #1B1212;
   --black-lighter: #1A1110;
   --grey: #454545;
   --primary-font: 'Tahoma', serif;
   --secondary-font: 'Calistoga', serif;
+  --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 * {

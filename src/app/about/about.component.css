@@ -1,4 +1,9 @@
-.headingAbout {
+.aboutHeading {
+  color: var(--green);
   font-family: var(--secondary-font);
-  color: var(--orange);
+  font-size: 48px;
+}
+
+.aboutSubheading {
+  font-size: 26px;
 }

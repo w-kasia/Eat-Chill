@@ -29,6 +29,7 @@ export class ReservationComponent implements OnInit{
     this.reservationForm = new FormGroup({
       'clientData': new FormGroup({
         'name': new FormControl('', Validators.required),
+        'surname': new FormControl('', Validators.required),
         'email': new FormControl('', [Validators.required, Validators.email]),
         'phone': new FormControl('', [Validators.required, Validators.pattern('[0-9]{9}')])
       }),
@@ -49,6 +50,7 @@ export class ReservationComponent implements OnInit{
 
     addDoc(acollection, {
       'name': this.reservationForm.value.clientData.name,
+      'surname': this.reservationForm.value.clientData.surname,
       'email': this.reservationForm.value.clientData.email,
       'phone': this.reservationForm.value.clientData.phone,
       'date': this.reservationForm.value.reservationDetails.date,

@@ -1,8 +1,26 @@
 .container {
-  min-height: 100vh;
+  margin-top: 40px;
+}
+
+.testimonialsHeading {
+  color: var(--green);
+  font-family: var(--secondary-font);
+  font-size: 40px;
+}
+
+.testimonialsSubheading {
+  font-size: 22px;
 }
 
 .testimonial {
-  max-width: 400px;
- height: 300px;
+ height: 200px;
+
+}
+
+.carousel {
+  height: 30vh;
+}
+
+.carousel-caption h1 {
+  font-size: 20px;
 }

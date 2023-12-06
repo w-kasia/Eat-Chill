@@ -1,46 +1,19 @@
-<!-- <div class="container-fluid px-0">
-  <div class="bg-image">
-
+<div class="container-fluid p-0">
+  <app-navbar></app-navbar>
+  <div class="banner-image d-flex justify-content-center align-items-center bgImageContainer">
     <img class="img-fluid" class="homeBackgroundImage" [src]="homeBackgroundImage" alt="">
-  </div>
-  <div class="row">
-    <div class="col">
-    </div>
-  </div>
-</div>
-
-<app-about></app-about> -->
-
-
-
-<!-- <div class="container-fluid">
-  <div class="row">
-    <div class="col">
-      <h3>Most Popular Items</h3>
-    </div>
-    <div class="row">
-      <h4>Popular Breakfast</h4>
-      <h4> Lovely Dinner</h4>
-      <h4>Drinks</h4>
-    </div>
-  </div>
-</div> -->
-
-
-<app-navbar></app-navbar>
-<div class="banner-image d-flex justify-content-center align-items-center bgImageContainer">
-  <img class="img-fluid" class="homeBackgroundImage" [src]="homeBackgroundImage" alt="">
-  <div class="welcome-text d-flex justify-content-center align-items-center">
-    <div class="row">
-      <div class="col">
-        <h1 class="text-center text-white">Hello in our restaurant!</h1>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, iusto?</h2>
-        <button (click)="goToReservation()">Book a table</button>
+    <div class="welcome-text d-flex justify-content-center align-items-center">
+      <div class="row text-center">
+        <div class="col">
+          <h1 class="homeHeading">Welcome to our restaurant</h1>
+          <h2 class="homeSubheading">Relax, you are in good hands</h2>
+          <button class="bookingButton" (click)="goToReservation()">Book a table</button>
+        </div>
       </div>
     </div>
   </div>
+  <app-about></app-about>
+  <app-team></app-team>
+  <app-testimonials></app-testimonials>
+  <app-footer></app-footer>
 </div>
-<app-team></app-team>
-<app-about></app-about>
-<app-testimonials></app-testimonials>
-<app-footer></app-footer>

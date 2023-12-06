@@ -1,4 +1,4 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,18 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  logo = 'assets/logo.png';
-  // homeBackgroundImage = 'assets/images/background-nav.jpg';
-
   constructor(private router: Router) {}
+
+  logo = 'assets/logo.png';
 
   goToReservation() {
     this.router.navigate(['/reservation']);
   }
 
-@HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll', ['$event'])
 
-onWindowScroll() {
+  onWindowScroll() {
     let element = document.querySelector('.navbar') as HTMLElement;
     if (window.pageYOffset > element.clientHeight) {
       element.classList.add('navbar-inverse');
@@ -26,7 +25,4 @@ onWindowScroll() {
       element.classList.remove('navbar-inverse');
     }
   }
-
-
 }
-

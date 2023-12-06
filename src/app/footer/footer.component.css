@@ -1,31 +1,30 @@
-footer {
-  width: 100%;
-}
-
 .container {
-  background-color: var(--green);
-  color: var(--white);
   min-height: 50vh;
   border-radius: 20px;
+  background-color: var(--green);
+  color: var(--white);
 }
 
-.footerIcon {
-  filter: invert(93%) sepia(43%) saturate(2654%) hue-rotate(180deg) brightness(111%) contrast(108%);
-  padding-right: 8px;
+.footerHeading {
+  margin-bottom: 20px;
+}
+
+.footerHeading h1, h2{
+  font-size: 24px;
 }
 
 .contactItems a {
-  text-decoration: none;
   color: var(--white);
+  text-decoration: none;
+}
+
+.footerIcon {
+  padding-right: 8px;
+  filter: invert(93%) sepia(43%) saturate(2654%) hue-rotate(180deg) brightness(111%) contrast(108%);
 }
 
 .reservationButton {
   border: none;
   background-color: transparent;
   color: var(--white);
-}
-
-.heading {
-  font-size: 24px;
-  margin-bottom: 20px;
 }

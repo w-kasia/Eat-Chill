@@ -26,3 +26,14 @@ select.ng-valid {
 .submitMessage {
   color: green;
 }
+
+.reservationImg {
+height: 100vh;
+}
+
+.formContainer {
+  background-color: var(--green);
+  color: var(--white);
+  max-width: 50vw;
+  height: 80vh;
+}
