@@ -1,3 +1,8 @@
+.contactContainer {
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
 input, textarea {
   padding-bottom: 15px;
   margin-bottom: 8px;
@@ -9,7 +14,7 @@ button {
   margin-top: 15px;
 }
 
-input.ng-invalid.ng-touched, 
+input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
   border: 1px solid red;
 }
@@ -21,5 +26,16 @@ textarea.ng-valid {
 .help-block {
   color: red;
   font-size: 13px;
-} 
+}
 
+.formContainer {
+  background-color: var(--green-secondary);
+
+}
+
+/* .form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+} */

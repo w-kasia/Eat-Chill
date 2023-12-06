@@ -1,44 +1,55 @@
 <div class="container">
-  <div class="row row-cols-2 align-items-center">
-    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-      <div class="col-8">
-        <label for="inputName" class="form-label">Name</label>
-        <input type="text" class="form-control" id="inputName" ngModel name="name" required #name="ngModel">
-        <span class="help-block" *ngIf="!name.valid && name.touched">Name is required!</span>
-      </div>
-      <div class="col-8">
-        <label for="inputEmail" class="form-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail" ngModel name="email"
-          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required email #email="ngModel">
-        <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid
-          email!</span>
-      </div>
-      <div class="col-8">
-        <label for="inputPhone" class="form-label">Phone</label>
-        <input type="tel" class="form-control" id="inputPhone" ngModel name="phone" pattern="[0-9]{9}" required
-          #phone="ngModel">
-        <span class="help-block" *ngIf="!phone.valid && phone.touched">Please enter a valid phone number!</span>
-      </div>
-      <div class="col-8">
-        <label for="inputMessage" class="form-label">Write Message</label>
-        <textarea class="form-control" id="inputMessage" rows="3" ngModel name="message" required
-          #message="ngModel"></textarea>
-        <span class="help-block" *ngIf="!message.valid && message.touched">Message is required!</span>
-      </div>
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">SEND MESSAGE</button>
-      </div>
-      
-      <p *ngIf="isSubmit" class="submitMessage">{{submitMessage}}</p>
+  <div class="row row-cols-2 align-items-center contactContainer">
+
+    <div class="col-6 formContainer">
+
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="form">
 
 
-    </form>
-    <div>
+
+
+        <div class="col-6">
+          <label for="inputName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="inputName" ngModel name="name" required #name="ngModel">
+          <span class="help-block" *ngIf="!name.valid && name.touched">Name is required!</span>
+        </div>
+        <div class="col-6">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" ngModel name="email"
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required email #email="ngModel">
+          <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid
+            email!</span>
+        </div>
+        <div class="col-6">
+          <label for="inputPhone" class="form-label">Phone</label>
+          <input type="tel" class="form-control" id="inputPhone" ngModel name="phone" pattern="[0-9]{9}" required
+            #phone="ngModel">
+          <span class="help-block" *ngIf="!phone.valid && phone.touched">Please enter a valid phone number!</span>
+        </div>
+        <div class="col-6">
+          <label for="inputMessage" class="form-label">Write Message</label>
+          <textarea class="form-control" id="inputMessage" rows="3" ngModel name="message" required
+            #message="ngModel"></textarea>
+          <span class="help-block" *ngIf="!message.valid && message.touched">Message is required!</span>
+        </div>
+        <div class="col-3">
+          <button type="submit" class="btn btn-primary" [disabled]="!f.valid">SEND MESSAGE</button>
+        </div>
+
+        <p *ngIf="isSubmit" class="submitMessage">{{submitMessage}}</p>
+
+
+      </form>
+    </div>
+
+    <div class="col-6 text-center">
       <h1>Contact Details</h1>
       <p>34 Street Name, City Name Here, United States</p>
       <p>+1 242 4942 290</p>
       <p>info@yourdomain.com</p>
     </div>
+
+
   </div>
 </div>
 

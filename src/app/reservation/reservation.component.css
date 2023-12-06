@@ -1,6 +1,7 @@
 .container {
   min-height: 100vh;
   max-width: 100vw;
+  /* background-image: url("src/app/assets/images/restaurantreservation.jpg"); */
 }
 
 input.ng-invalid.ng-touched {

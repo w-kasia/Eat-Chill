@@ -1,0 +1,36 @@
+.container {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-image: url(/assets/error.png);
+  background-size: 100vw;
+  color: var(--white);
+}
+
+.errorHeading {
+  font-size: 130px;
+}
+
+.errorSubheading {
+  font-size: 40px;
+}
+
+.goHomeButton {
+  margin-top: 30px;
+  width: 250px;
+  padding: 15px;
+  background-color: var(--green-secondary);
+  color: black;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: bold;
+  border-top-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+
+
+
+.goHomeButton:hover {
+  border-radius: 0px 28px 0px 28px;
+}

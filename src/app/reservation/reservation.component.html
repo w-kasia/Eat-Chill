@@ -1,9 +1,9 @@
-<div class="container">
-  <div class="row align-items-center">
-    <div class="col-4 p-0">
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="row">
+    <!-- <div class="col-4 p-0">
       <img class="img-fluid reservationImg" src="assets/images/reservation.jpg" alt="">
-    </div>
-    <div class="col-8 d-flex formContainer">
+    </div> -->
+    <div class="col d-flex formContainer">
       <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
 
         <div formGroupName="clientData">
