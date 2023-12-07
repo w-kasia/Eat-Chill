@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row row-cols-3">
+    <div *ngFor="let point of points" class="col-4 d-flex">
+      <div>
+        <img class="icon" src="{{point.src}}" alt="{{point.alt}}">
+      </div>
+      <div class="description">
+        <p class="pointHeading">{{point.heading}}</p>
+        <p>{{point.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>

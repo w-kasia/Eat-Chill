@@ -11,7 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TeamComponent } from './team/team.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';           
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';        
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { PointsComponent } from './points/points.component';        
 
 const firebaseConfig = {
   apiKey: "AIzaSyBKE2TEyOQoVsBP961Qg5o35fWrHnKJh04",
@@ -33,6 +34,7 @@ const firebaseConfig = {
     NavbarComponent,
     TeamComponent,
     TestimonialsComponent,
+    PointsComponent,
   ],
   imports: [
     provideFirebaseApp(() => initializeApp(firebaseConfig)),

@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  homeBackgroundImage = 'assets/images/background-nav.jpg';
+  // homeBackgroundImage = 'assets/images/background-nav.jpg';
+  homeBackgroundImage = 'assets/images/back.jpg';
   constructor(private router: Router) {}
 
   goToReservation() {

@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-faq',
@@ -6,6 +7,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent {
-  imgFaqSection = 'assets/images/img-faq.jpg';
 
+  constructor(private router: Router) {}
+
+  goToContact() {
+    this.router.navigate(['/contact']);
+  }
 }
