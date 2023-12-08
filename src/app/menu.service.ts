@@ -8,7 +8,9 @@ export class MenuService {
   constructor() { }
 
   private menuOptions = [
-    {type: 'Pizza', items: [
+    {type: 'Pizza',
+    icon: 'assets/icons/icon-pizza.svg',
+    items: [
       { name: 'Italian Club',
         ingredients: 'marinara, mozzarella, pepperoni, Canadian bacon, salami, bacon'
         },
@@ -26,9 +28,20 @@ export class MenuService {
         },
         { name: 'Jalapeno Popper',
         ingredients: 'alfredo sauce, blackened chicken, bacon, cheddar, and jalapenos'
+        },
+        { name: 'The Popeye',
+        ingredients: 'oil base, mozzarella, fresh spinach, roasted garlic, feta, roasted red peppers, red onions'
+        },
+        { name: 'The Krewe',
+        ingredients: 'marinara, mozzarella, pepperoni, bacon, cheddar, feta, parmesan'
+        },
+        { name: 'Jalapeno Popper',
+        ingredients: 'alfredo sauce, blackened chicken, bacon, cheddar, and jalapenos'
         }
     ]},
-    {type: 'Burger', items: [
+    {type: 'Burger',
+    icon: 'assets/icons/icon-burger.svg',
+    items: [
       { name: 'Big Boy Burger',
         ingredients: 'double patty, fried jalapeños, cheddar cheese, BBQ sauce, fried onion rings, toasted brioche bun'
         },
@@ -48,7 +61,9 @@ export class MenuService {
         ingredients: 'angus beef stacked with pulled pork, mac & cheese, fried egg, slaw, mayo'
         }
     ]},
-    {type: 'Pasta', items: [
+    {type: 'Pasta',
+    icon: 'assets/icons/icon-pasta.svg',
+    items: [
       { name: 'Chicken Parm Pasta',
         ingredients: 'fried chicken, spaghetti, red gravy, mozzarella, baked, finished with fresh basil, black pepperparmesan, asiago'
         },
@@ -68,7 +83,25 @@ export class MenuService {
         ingredients: 'penne, alfredo, blackened chicken'
         }
     ]},
-    {type: 'Desserts', items: [
+    {type: 'Soups',
+    icon: 'assets/icons/icon-soup.svg',
+    items: [
+      { name: 'Third Street Sour',
+        ingredients: 'Great Jones Straight Bourbon, pear puree, fresh lemon juice, simple syrup, dash cardamom bitters, dry red wine for float'
+        },
+        { name: 'Pradaise Coupe',
+        ingredients: 'Great Jones Four Grain Bourbon, fresh lemon juice, demerara sugar syrup, drops Bourbon vanilla tincture,lemon zest'
+        },
+        { name: 'Empire State Cobbler',
+        ingredients: 'Great Jones Straight Bourbon, apple cider, fresh lemon juice, strained, Orgeat syrup, dehydrated apple slice, nutmeg for grinding'
+        },
+        { name: 'Ice Pick',
+        ingredients: 'Great Jones Four Grain Bourbon, dessert wine (such as Pindar Riesling), fresh lemon juice, large lemon peel'
+        },
+    ]},
+    {type: 'Desserts',
+    icon: 'assets/icons/icon-cake.svg',
+    items: [
       { name: 'Bread Pudding Bites',
         ingredients: 'flash fried bread pudding bites, vanilla bean mousse, caramel, vanilla syrup'
         },
@@ -88,7 +121,9 @@ export class MenuService {
         ingredients: 'whipped white chocolate ganache, brandied cherries, brandied cherry buttercream, chocolate trees'
         },
     ]},
-    {type: 'Coctails', items: [
+    {type: 'Coctails',
+    icon: 'assets/icons/icon-coctail.svg',
+    items: [
       { name: 'Third Street Sour',
         ingredients: 'Great Jones Straight Bourbon, pear puree, fresh lemon juice, simple syrup, dash cardamom bitters, dry red wine for float'
         },

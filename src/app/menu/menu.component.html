@@ -1,16 +1,22 @@
-<div class="container">
+<div class="container align-items-center">
   <div class="row">
-    <div class="col-2" *ngFor="let menuOption of menuOptions; let i = index">
-      <div (click)="toggleSection(i)">
-      <h1 class="menuOption">{{ menuOption.type }}</h1>
+    <div class="col" *ngFor="let menuOption of menuOptions; let i = index">
+      <div class="typeOfFood" (click)="toggleSection(i)">
+        <img class="menuIcon" src="{{ menuOption.icon }}" alt="">
+        <h1 class="menuOption">{{ menuOption.type }}</h1>
       </div>
-      <div class="menu-container">
-        <div class="menuItems" *ngIf="i === activeOptionIndex">
-          <h1>{{ menuOption.type }}</h1>
-          <div *ngFor="let item of menuOption.items">
-            <h2> {{ item.name }}</h2>
-            <p>{{ item.ingredients }}</p>
+    </div>
+    <div class="row" *ngFor="let menuOption of menuOptions; let i = index">
+      <div class="menu-container" *ngIf="i === activeOptionIndex">
+        <div class="menuItems">
+          <h2 class="foodType">{{ menuOption.type | uppercase }}</h2>
+          <div class="row row-cols-3">
+            <div class="col" *ngFor="let item of menuOption.items">
+              <h3 class="dishName"> {{ item.name | uppercase }}</h3>
+              <p class="dishIngredients">{{ item.ingredients }}</p>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
