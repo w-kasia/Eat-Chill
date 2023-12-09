@@ -1,43 +1,37 @@
 <div class="container d-flex justify-content-center align-items-center">
   <div class="row">
-    <!-- <div class="col-4 p-0">
-      <img class="img-fluid reservationImg" src="assets/images/reservation.jpg" alt="">
-    </div> -->
     <div class="col d-flex formContainer">
       <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
-
-        <div formGroupName="clientData">
+        <div class="row justify-content-center">
+  <div formGroupName="clientData">
           <div class="row">
             <div class="form-group col-6">
               <label for="name" class="form-label">First name</label>
               <input type="text" class="form-control" id="name" formControlName="name">
-              <span
+              <small
                 *ngIf="!reservationForm.get('clientData.name')?.valid && reservationForm.get('clientData.name')?.touched"
-                class="help-block">Please
-                enter a valid username</span>
+                class="help-block">First name is required</small>
             </div>
             <div class="form-group col-6">
               <label for="surname" class="form-label">Last name</label>
               <input type="text" class="form-control" id="surname" formControlName="surname">
-              <span
+              <small
                 *ngIf="!reservationForm.get('clientData.surname')?.valid && reservationForm.get('clientData.surname')?.touched"
-                class="help-block">Please enter a valid last name</span>
+                class="help-block">Last name is required</small>
             </div>
             <div class="form-group col-6">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" formControlName="email">
-              <span
+              <small
                 *ngIf="!reservationForm.get('clientData.email')?.valid && reservationForm.get('clientData.email')?.touched"
-                class="help-block">Please
-                enter a valid email</span>
+                class="help-block">Please enter a valid e-mail</small>
             </div>
             <div class="form-group col-6">
               <label for="phone" class="form-label">Phone</label>
               <input type="tel" class="form-control" id="phone" formControlName="phone">
-              <span
+              <small
                 *ngIf="!reservationForm.get('clientData.phone')?.valid && reservationForm.get('clientData.phone')?.touched"
-                class="help-block">Please enter a valid phone number
-              </span>
+                class="help-block">Please enter a valid phone number</small>
             </div>
           </div>
         </div>
@@ -49,29 +43,26 @@
                 min="{{currentDate | date: 'yyyy-MM-dd'}}">
               <!-- <input type="time" class="form-control" id="time" formControlName="time"
           min="{{currentTime | date: 'shortTime'}}" > -->
-
-              <span
+              <small
                 *ngIf="!reservationForm.get('reservationDetails.date')?.valid && reservationForm.get('reservationDetails.date')?.touched"
-                class="help-block">Please choose date
-              </span>
+                class="help-block">Choose a date
+              </small>
             </div>
-
             <div class="form-group col-3">
               <label for="time" class="form-label">Time</label>
               <input type="time" class="form-control" id="time" formControlName="time">
-              <span
+              <small
                 *ngIf="!reservationForm.get('reservationDetails.time')?.valid && reservationForm.get('reservationDetails.time')?.touched"
-                class="help-block">Please choose time(between 10-22)
-              </span>
+                class="help-block">Choose time(10-22)
+              </small>
             </div>
-
             <div class="select col-2">
               <label for="guests" class="form-label">Guests</label>
               <input type="number" class="form-control" id="input1" placeholder="enter amount" max="6" min="1"
                 formControlName="numbers">
-              <span
+              <small
                 *ngIf="!reservationForm.get('reservationDetails.numbers')?.valid && reservationForm.get('reservationDetails.numbers')?.touched"
-                class="help-block">Please, choose number of guests</span>
+                class="help-block">Choose number</small>
             </div>
             <div class="select col-4">
               <label for="occasion" class="form-label">Occasion</label>
@@ -80,9 +71,9 @@
                 <option value="">Choose...</option>
                 <option *ngFor="let occasion of occasions">{{occasion}}</option>
               </select>
-              <span
+              <small
                 *ngIf="!reservationForm.get('reservationDetails.occasions')?.valid && reservationForm.get('reservationDetails.occasions')?.touched"
-                class="help-block">Please, choose an occasion</span>
+                class="help-block">Choose an occasion</small>
             </div>
             <div class="form-group col-12">
               <label for="message" class="form-label">Special request</label>
@@ -91,15 +82,13 @@
             </div>
           </div>
         </div>
-
         <div class="col-12">
-          <button class="btn btn-primary" type="submit" [disabled]="!reservationForm.valid">MAKE RESERVATION</button>
+          <button class="submitButton" type="submit" [disabled]="!reservationForm.valid">MAKE RESERVATION</button>
           <p *ngIf="isSubmit" class="submitMessage">{{submitMessage}}</p>
+        </div>
         </div>
 
       </form>
     </div>
-
-
   </div>
 </div>

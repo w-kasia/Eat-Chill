@@ -10,12 +10,15 @@ import { addDoc, collection } from 'firebase/firestore';
 })
 export class ReservationComponent implements OnInit{
 
-  reservationForm!: FormGroup;
+  reservationForm: FormGroup;
+
 
   occasions: string[] = ['Eat & Chill', 'Birthday', 'Annivarsary', 'Business meeting'];
 
   isSubmit = true;
   submitMessage = '';
+
+
 
   // maxDate: any = '2024-01-01';
 
@@ -28,17 +31,17 @@ export class ReservationComponent implements OnInit{
   ngOnInit() {
     this.reservationForm = new FormGroup({
       'clientData': new FormGroup({
-        'name': new FormControl('', Validators.required),
-        'surname': new FormControl('', Validators.required),
-        'email': new FormControl('', [Validators.required, Validators.email]),
-        'phone': new FormControl('', [Validators.required, Validators.pattern('[0-9]{9}')])
+        'name': new FormControl(null, Validators.required),
+        'surname': new FormControl(null, Validators.required),
+        'email': new FormControl(null, [Validators.required, Validators.email]),
+        'phone': new FormControl(null, [Validators.required, Validators.pattern('[0-9]{9}')])
       }),
       'reservationDetails': new FormGroup({
-        'date': new FormControl('', Validators.required),
-        'time': new FormControl('', Validators.required),
-        'numbers': new FormControl('', Validators.required),
-        'occasions': new FormControl('', Validators.required),
-        'message': new FormControl('')
+        'date': new FormControl(null, Validators.required),
+        'time': new FormControl(null, Validators.required),
+        'numbers': new FormControl(null, Validators.required),
+        'occasions': new FormControl(null, Validators.required),
+        'message': new FormControl(null)
       })
     });
   }
