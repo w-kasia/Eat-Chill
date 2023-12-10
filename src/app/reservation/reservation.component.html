@@ -3,92 +3,105 @@
     <div class="col d-flex formContainer">
       <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
         <div class="row justify-content-center">
-  <div formGroupName="clientData">
-          <div class="row">
-            <div class="form-group col-6">
-              <label for="name" class="form-label">First name</label>
-              <input type="text" class="form-control" id="name" formControlName="name">
-              <small
-                *ngIf="!reservationForm.get('clientData.name')?.valid && reservationForm.get('clientData.name')?.touched"
-                class="help-block">First name is required</small>
-            </div>
-            <div class="form-group col-6">
-              <label for="surname" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="surname" formControlName="surname">
-              <small
-                *ngIf="!reservationForm.get('clientData.surname')?.valid && reservationForm.get('clientData.surname')?.touched"
-                class="help-block">Last name is required</small>
-            </div>
-            <div class="form-group col-6">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" formControlName="email">
-              <small
-                *ngIf="!reservationForm.get('clientData.email')?.valid && reservationForm.get('clientData.email')?.touched"
-                class="help-block">Please enter a valid e-mail</small>
-            </div>
-            <div class="form-group col-6">
-              <label for="phone" class="form-label">Phone</label>
-              <input type="tel" class="form-control" id="phone" formControlName="phone">
-              <small
-                *ngIf="!reservationForm.get('clientData.phone')?.valid && reservationForm.get('clientData.phone')?.touched"
-                class="help-block">Please enter a valid phone number</small>
+          <div formGroupName="clientData">
+            <div class="row">
+              <div class="form-group col-6">
+                <label for="name" class="form-label">First name</label>
+                <input type="text" class="form-control" id="name" formControlName="name">
+                <small
+                  *ngIf="!reservationForm.get('clientData.name')?.valid && reservationForm.get('clientData.name')?.touched"
+                  class="help-block">First name is required</small>
+              </div>
+              <div class="form-group col-6">
+                <label for="surname" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="surname" formControlName="surname">
+                <small
+                  *ngIf="!reservationForm.get('clientData.surname')?.valid && reservationForm.get('clientData.surname')?.touched"
+                  class="help-block">Last name is required</small>
+              </div>
+              <div class="form-group col-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+                <small
+                  *ngIf="!reservationForm.get('clientData.email')?.valid && reservationForm.get('clientData.email')?.touched"
+                  class="help-block">Please enter a valid e-mail</small>
+              </div>
+              <div class="form-group col-6">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone" formControlName="phone">
+                <small
+                  *ngIf="!reservationForm.get('clientData.phone')?.valid && reservationForm.get('clientData.phone')?.touched"
+                  class="help-block">Please enter a valid phone number</small>
+              </div>
             </div>
           </div>
-        </div>
-        <div formGroupName="reservationDetails">
-          <div class="row">
-            <div class="form-group col-3">
-              <label for="date" class="form-label">Date</label>
-              <input type="date" class="form-control" id="date" formControlName="date"
-                min="{{currentDate | date: 'yyyy-MM-dd'}}">
-              <!-- <input type="time" class="form-control" id="time" formControlName="time"
+          <div formGroupName="reservationDetails">
+            <div class="row">
+              <div class="form-group col-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" formControlName="date"
+                  min="{{currentDate | date: 'yyyy-MM-dd'}}">
+                <!-- <input type="time" class="form-control" id="time" formControlName="time"
           min="{{currentTime | date: 'shortTime'}}" > -->
-              <small
-                *ngIf="!reservationForm.get('reservationDetails.date')?.valid && reservationForm.get('reservationDetails.date')?.touched"
-                class="help-block">Choose a date
-              </small>
-            </div>
-            <div class="form-group col-3">
-              <label for="time" class="form-label">Time</label>
-              <input type="time" class="form-control" id="time" formControlName="time">
-              <small
-                *ngIf="!reservationForm.get('reservationDetails.time')?.valid && reservationForm.get('reservationDetails.time')?.touched"
-                class="help-block">Choose time(10-22)
-              </small>
-            </div>
-            <div class="select col-2">
-              <label for="guests" class="form-label">Guests</label>
-              <input type="number" class="form-control" id="input1" placeholder="enter amount" max="6" min="1"
-                formControlName="numbers">
-              <small
-                *ngIf="!reservationForm.get('reservationDetails.numbers')?.valid && reservationForm.get('reservationDetails.numbers')?.touched"
-                class="help-block">Choose number</small>
-            </div>
-            <div class="select col-4">
-              <label for="occasion" class="form-label">Occasion</label>
-              <select class="form-select" id="occasion" aria-describedby="validationServer04Feedback"
-                formControlName="occasions">
-                <option value="">Choose...</option>
-                <option *ngFor="let occasion of occasions">{{occasion}}</option>
-              </select>
-              <small
-                *ngIf="!reservationForm.get('reservationDetails.occasions')?.valid && reservationForm.get('reservationDetails.occasions')?.touched"
-                class="help-block">Choose an occasion</small>
-            </div>
-            <div class="form-group col-12">
-              <label for="message" class="form-label">Special request</label>
-              <textarea class="form-control" id="inputMessage" rows="3" name="message"
-                formControlName="message"></textarea>
+                <small
+                  *ngIf="!reservationForm.get('reservationDetails.date')?.valid && reservationForm.get('reservationDetails.date')?.touched"
+                  class="help-block">Choose a date
+                </small>
+              </div>
+              <div class="form-group col-3">
+                <label for="time" class="form-label">Time</label>
+                <input type="time" class="form-control" id="time" formControlName="time">
+                <small
+                  *ngIf="!reservationForm.get('reservationDetails.time')?.valid && reservationForm.get('reservationDetails.time')?.touched"
+                  class="help-block">Choose time(10-22)
+                </small>
+              </div>
+              <div class="select col-2">
+                <label for="guests" class="form-label">Guests</label>
+                <input type="number" class="form-control" id="input1" placeholder="enter amount" max="6" min="1"
+                  formControlName="numbers">
+                <small
+                  *ngIf="!reservationForm.get('reservationDetails.numbers')?.valid && reservationForm.get('reservationDetails.numbers')?.touched"
+                  class="help-block">Choose number</small>
+              </div>
+              <div class="select col-4">
+                <label for="occasion" class="form-label">Occasion</label>
+                <select class="form-select" id="occasion" aria-describedby="validationServer04Feedback"
+                  formControlName="occasions">
+                  <option value="">Choose...</option>
+                  <option *ngFor="let occasion of occasions">{{occasion}}</option>
+                </select>
+                <small
+                  *ngIf="!reservationForm.get('reservationDetails.occasions')?.valid && reservationForm.get('reservationDetails.occasions')?.touched"
+                  class="help-block">Choose an occasion</small>
+              </div>
+              <div class="form-group col-12">
+                <label for="message" class="form-label">Special request</label>
+                <textarea class="form-control" id="inputMessage" rows="3" name="message"
+                  formControlName="message"></textarea>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12">
-          <button class="submitButton" type="submit" [disabled]="!reservationForm.valid">MAKE RESERVATION</button>
-          <p *ngIf="isSubmit" class="submitMessage">{{submitMessage}}</p>
+          <button class="submitButton" type="submit" [disabled]="!reservationForm.valid" data-bs-toggle="modal" data-bs-target="#reservationModal">SEND</button>
         </div>
-        </div>
-
       </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="reservationModalLabel">Success!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Message send successfully! We will contact with you to confirm reservation as soon as possible. 
+      </div>
     </div>
   </div>
 </div>

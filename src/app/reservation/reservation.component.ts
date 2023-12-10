@@ -12,12 +12,7 @@ export class ReservationComponent implements OnInit{
 
   reservationForm: FormGroup;
 
-
   occasions: string[] = ['Eat & Chill', 'Birthday', 'Annivarsary', 'Business meeting'];
-
-  isSubmit = true;
-  submitMessage = '';
-
 
 
   // maxDate: any = '2024-01-01';
@@ -65,12 +60,7 @@ export class ReservationComponent implements OnInit{
   }
 
   onSubmit() {
-    this.isSubmit = true;
-    this.submitMessage = 'Message send successfully';
     this.saveData();
     this.reservationForm.reset();
-    setTimeout(() => {
-      this.isSubmit = false;
-    }, 4000)
   }
 }

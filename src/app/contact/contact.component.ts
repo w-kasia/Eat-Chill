@@ -13,9 +13,9 @@ export class ContactComponent {
   isSubmit = true;
   submitMessage = '';
 
- firestore: Firestore = inject(Firestore);
+  firestore: Firestore = inject(Firestore);
 
- @ViewChild('f') contactForm: any;
+  @ViewChild('f') contactForm: any;
 
   saveData(): void {
     const acollection = collection(this.firestore, 'client');

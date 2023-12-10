@@ -1,9 +1,9 @@
 .container {
-  min-height: 100vh;
   max-width: 100vw;
+  min-height: 100vh;
+  color: var(--white);
   background-image: url(/assets/error.png);
   background-size: 100vw;
-  color: var(--white);
 }
 
 .errorHeading {
@@ -15,21 +15,19 @@
 }
 
 .goHomeButton {
-  margin-top: 30px;
   width: 250px;
+  margin-top: 30px;
   padding: 15px;
-  background-color: var(--green-secondary);
-  color: black;
   border: none;
-  outline: none;
-  text-transform: uppercase;
-  font-size: 23px;
-  font-weight: bold;
   border-top-left-radius: 28px;
   border-bottom-right-radius: 28px;
+  outline: none;
+  font-size: 23px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  background-color: var(--green-secondary);
 }
-
-
 
 .goHomeButton:hover {
   border-radius: 0px 28px 0px 28px;

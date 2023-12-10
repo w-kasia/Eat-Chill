@@ -1,10 +1,7 @@
 .container {
   min-height: 100vh;
   margin-top: 4px;
-
-  }
-
-
+}
 
 .imgForFaqSection
  {
@@ -12,29 +9,16 @@
   height: 200px;
   border-radius: 20px;
  }
-/*
-.navbar {
-  position: relative;
-  z-index: 1;
-} */
-/* .navigation {
- margin-bottom: 100px;
-} */
 
 .faqHeading {
+  position: sticky;
+  top: 30%;
   font-size: 46px;
   font-family: var(--secondary-font);
   color: var(--green);
-position: sticky;
-top: 30%;
 }
 
-/* .accordion {
-  width: 800px;
-} */
-
 .accordion-item {
-
   margin-bottom: 15px;
   border-radius: 20px;
   overflow: hidden;
@@ -43,12 +27,12 @@ top: 30%;
 
 .accordion-button{
   padding: 20px;
-  background-color: var(--green);
-  color: var(--white);
   font-size: 16px;
+  color: var(--white);
+  background-color: var(--green);
 }
 
 .contactButton {
-  background-color: transparent;
   border: none;
+  background-color: transparent;
 }

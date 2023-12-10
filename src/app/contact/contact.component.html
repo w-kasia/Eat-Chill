@@ -1,144 +1,46 @@
 <div class="container">
-  <div class="row justify-content-center align-items-center contactContainer">
-
+  <div class="row align-items-center justify-content-center contactContainer">
     <div class="col-6 formContainer">
       <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="form">
-
         <div class="form-group">
-        <label for="inputName" class="form-label">Name</label>
+          <label for="inputName" class="form-label">Name</label>
           <input type="text" class="form-control" id="inputName" ngModel name="name" required #name="ngModel">
-          <span class="help-block" *ngIf="!name.valid && name.touched">Name is required!</span>
-        </div>
-
-        <div class="form-group">
-        <label for="inputEmail" class="form-label">Email</label>
-
-          <input type="email" class="form-control" id="inputEmail" ngModel name="email"
-            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required email #email="ngModel">
-          <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid
-            email!</span>
+          <span class="help-block" *ngIf="!name.valid && name.touched">Name is required</span>
         </div>
         <div class="form-group">
-        <label for="inputPhone" class="form-label">Phone</label>
-
-          <input type="tel" class="form-control" id="inputPhone" ngModel name="phone" pattern="[0-9]{9}" required
-            #phone="ngModel">
-          <span class="help-block" *ngIf="!phone.valid && phone.touched">Please enter a valid phone number!</span>
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" ngModel name="email" required email
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" #email="ngModel">
+          <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
         </div>
         <div class="form-group">
-        <label for="inputMessage" class="form-label">Write Message</label>
-
-          <textarea class="form-control" id="inputMessage" rows="3" ngModel name="message" required
-            #message="ngModel"></textarea>
-          <span class="help-block" *ngIf="!message.valid && message.touched">Message is required!</span>
+          <label for="inputPhone" class="form-label">Phone</label>
+          <input type="tel" class="form-control" id="inputPhone" ngModel name="phone" required pattern="[0-9]{9}" #phone="ngModel">
+          <span class="help-block" *ngIf="!phone.valid && phone.touched">Please enter a valid phone number</span>
+        </div>
+        <div class="form-group">
+          <label for="inputMessage" class="form-label">Write Message</label>
+          <textarea rows="3" class="form-control" id="inputMessage" ngModel name="message" required #message="ngModel"></textarea>
+          <span class="help-block" *ngIf="!message.valid && message.touched">Message is required</span>
         </div>
         <div class="col-12">
-          <button type="submit" class="btn" [disabled]="!f.valid">SEND</button>
+          <button type="submit" class="btn" [disabled]="!f.valid" data-bs-toggle="modal" data-bs-target="#contactModal">SEND</button>
         </div>
-
-
-
-        <p *ngIf="isSubmit" class="submitMessage">{{submitMessage}}</p>
-
       </form>
-
-
     </div>
-
   </div>
-
 </div>
 
-
-
-
-
-
-
-
-<!-- <div class="container">
-  <div class="row row-cols-2 align-items-center contactContainer">
-
-    <div class="col-6 formContainer">
-      <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="form">
-        <div class="row justify-content-center">
-          <label for="inputName" class="form-label">Name</label>
-          <div class="input-group">
-            <input type="text" class="form-control" id="inputName" ngModel name="name" required #name="ngModel">
-            <span class="help-block" *ngIf="!name.valid && name.touched">Name is required!</span>
-          </div>
-
-          <label for="inputEmail" class="form-label">Email</label>
-          <div class="input-group col-5">
-
-            <input type="email" class="form-control" id="inputEmail" ngModel name="email"
-              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required email #email="ngModel">
-            <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid
-              email!</span>
-          </div>
-          <label for="inputPhone" class="form-label">Phone</label>
-          <div class="input-group col-4">
-
-            <input type="tel" class="form-control" id="inputPhone" ngModel name="phone" pattern="[0-9]{9}" required
-              #phone="ngModel">
-            <span class="help-block" *ngIf="!phone.valid && phone.touched">Please enter a valid phone number!</span>
-          </div>
-          <label for="inputMessage" class="form-label">Write Message</label>
-          <div class="input-group col-4">
-
-            <textarea class="form-control" id="inputMessage" rows="3" ngModel name="message" required
-              #message="ngModel"></textarea>
-            <span class="help-block" *ngIf="!message.valid && message.touched">Message is required!</span>
-          </div>
-          <div class="col-3">
-            <button type="submit" class="btn" [disabled]="!f.valid">SEND</button>
-          </div>
-
-        </div>
-
-        <p *ngIf="isSubmit" class="submitMessage">{{submitMessage}}</p>
-
-      </form>
-
-
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="contactModalLabel">Success!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Message send successfully! We will answer as soon as possible. 
+      </div>
     </div>
-
-    <div class="col-6 text-center">
-      <h1>Contact Details</h1>
-      <p>34 Street Name, City Name Here, United States</p>
-      <p>+1 242 4942 290</p>
-      <p>info@yourdomain.com</p>
-    </div>
-
   </div>
-</div> -->
-
-
-
-<!-- <div class="container">
-  <form class="col-12">
-    <div class="col-3">
-      <label for="inputName" class="form-label">Name</label>
-      <input type="text" class="form-control" id="inputName">
-    </div>
-    <div class="col-3">
-      <label for="inputEmail" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail">
-    </div>
-    <div class="col-3">
-      <label for="inputPhone" class="form-label">Phone</label>
-      <input type="text" class="form-control" id="inputPhone">
-    </div>
-    <div class="col-3">
-      <label for="inputTitle" class="form-label">Title</label>
-      <input type="text" class="form-control" id="inputTitle">
-    </div>
-    <div class="col-3">
-      <label for="inputMessage" class="form-label">Write Message</label>
-      <textarea class="form-control" id="inputMessage" rows="3"></textarea>
-    </div>
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
-    </div>
-  </form>
-</div> -->
+</div>

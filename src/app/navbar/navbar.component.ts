@@ -25,4 +25,8 @@ export class NavbarComponent {
       element.classList.remove('navbar-inverse');
     }
   }
+
+  toAbout() {
+    document.getElementById('aboutSection')?.scrollIntoView({behavior: 'smooth'});
+  }
 }
