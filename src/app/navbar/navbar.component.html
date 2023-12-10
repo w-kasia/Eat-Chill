@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand navbar-dark" (scroll)="onWindowScroll()">
   <div class="container d-flex align-items-center">
-    <div class="row justify-content-between">
+    <div class="row">
       <div class="col">
         <a routerLink="/home" class="navbar-brand"><img class="logo" [src]="logo" alt="Logo of restaurant"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -8,9 +8,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
+      
+    </div>
+    <div class="row">
       <div class="col">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav p-2">
             <li class="nav-item" routerLinkActive="active">
               <a class="nav-link" routerLink="/home">Home</a>
             </li>
@@ -27,20 +30,25 @@
               <a class="nav-link" routerLink="/gallery">Gallery</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link" routerLink="/contact">Contact</a>
+              <a class="nav-link" routerLink="/reservation">Reservation</a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="col reservationButton">
-        <!-- <li class="nav-item" routerLinkActive="active"> -->
-        <button>
-          <a class="nav-link" routerLink="/reservation">Reservation</a>
-        </button>
-
-      </div>
-
     </div>
+    <div class="row">
+       <div class="col ">
+      <!-- <li class="nav-item" routerLinkActive="active"> -->
+      <button class="contactButton">
+        <a class="nav-link" routerLink="/contact">Contact</a>
+       
+      </button>
+
+    </div> 
+    </div>
+  
+      
+
 
   </div>
 </nav>

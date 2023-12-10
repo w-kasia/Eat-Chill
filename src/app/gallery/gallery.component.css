@@ -1,9 +1,12 @@
+.container {
+  height: 100vh;
+}
+
 .imageOfDish {
   width: 400px;
   height: 550px;
   border-radius: 10px;
 }
-
 
 .imageOfDish:hover {
   transform: scale(1.1);
@@ -11,25 +14,26 @@
 }
 
 
-
 .lightbox {
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -10px;
+  bottom: -10px;
   width: 100vw;
+  left: 0;
   height: 100vh;
   background-color: rgba(0,0,0,.85);
 }
 
 .img-preview {
   border-radius: 15px;
-
+  height: 95vh;
 }
 
+
 .close-btn {
-  width: 100px;
+  width: 50px;
   color: white;
 }
