@@ -1,15 +1,10 @@
-<!-- <div class="container justify-content-center align-items-center mt-4 mb-4">
-  <div class="row g-2">
-    <div class="col-4" *ngFor="let image of images">
-      <div class="image-container p-3">
-        <img " class="imageOfDish" src="assets/images/gallery/{{image}}" alt="">
-      </div>
+<div class="navbarContainer">
+  <div class="row">
+    <div class="col">
+      <app-navbar></app-navbar>
     </div>
   </div>
-
-</div> -->
-<!-- <app-navbar></app-navbar> -->
-
+</div>
 <div class="container justify-content-center align-items-center mt-4 mb-4">
   <div class="row g-2">
     <div class="col-4" *ngFor="let image of images; let i = index">
@@ -18,8 +13,8 @@
       </div>
     </div>
     <div *ngIf="showMask" class="lightbox">
-      <button (click)="closePreview()" *ngIf="previewImage" class="close-btn">
-        <img src="assets/icon-close.svg" alt="">
+      <button type="button" (click)="closePreview()" *ngIf="previewImage" class="close-btn" aria-label="close">
+        <img class="closeIcon" src="assets/icons/icon-close.svg" alt="">
       </button>
 
       <button *ngIf="controls" class="carousel-control-prev btn-control" type="button" data-bs-slide="prev"
@@ -39,5 +34,6 @@
 
     </div>
   </div>
-
+  <app-footer></app-footer>
 </div>
+

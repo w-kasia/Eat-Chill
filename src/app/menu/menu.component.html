@@ -1,7 +1,14 @@
+<div class="navbarContainer">
+  <div class="row">
+    <div class="col">
+      <app-navbar></app-navbar>
+    </div>
+  </div>
+</div>
 <div class="container align-items-center">
   <div class="row">
     <div class="col" *ngFor="let menuOption of menuOptions; let i = index">
-      <div class="typeOfFood" (click)="toggleSection(i)">
+      <div class="typeOfFood" (click)="toggleSection(i)" [ngClass]="{'typeBackground': i === activeOptionIndex}">
         <img class="menuIcon" src="{{ menuOption.icon }}" alt="">
         <h1 class="menuOption">{{ menuOption.type }}</h1>
       </div>
@@ -22,3 +29,4 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>

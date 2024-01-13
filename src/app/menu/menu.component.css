@@ -48,3 +48,7 @@
   font-size: 23px;
   margin-top: 30px;
 }
+
+.typeBackground {
+  background-color: var(--green-secondary);
+}

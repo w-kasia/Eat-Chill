@@ -30,3 +30,8 @@ body {
   max-width: 150px;
 }
 
+.navbarContainer {
+  min-height: 15vh;
+  background-color: var(--green);
+  margin-bottom: 20px;
+}

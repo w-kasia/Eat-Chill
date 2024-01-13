@@ -15,6 +15,7 @@
 
 
 .lightbox {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +24,6 @@
   bottom: -10px;
   width: 100vw;
   left: 0;
-  height: 100vh;
   background-color: rgba(0,0,0,.85);
 }
 
@@ -32,8 +32,27 @@
   height: 95vh;
 }
 
+.carousel-control-prev {
+  position: absolute;
+  left: 70px;
+  font-size: 35px;
+}
+
+.carousel-control-next {
+  position: absolute;
+  right: 70px;
+  font-size: 35px;
+}
 
 .close-btn {
-  width: 50px;
-  color: white;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.closeIcon {
+  filter: invert(98%) sepia(7%) saturate(7485%) hue-rotate(180deg) brightness(110%) contrast(111%);
+  width: 25px;
 }

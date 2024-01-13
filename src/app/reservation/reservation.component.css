@@ -4,6 +4,7 @@
 /* background-color: var(--green); */
  background-image: url('/assets/reservation_bg.jpg');
  background-size: cover;
+ margin-bottom: 30px;
 }
 
 label {
@@ -91,4 +92,8 @@ height: 100vh;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;
+}
+
+.navbarContainer {
+  margin-bottom: 0;
 }
