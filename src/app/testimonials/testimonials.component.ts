@@ -7,24 +7,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./testimonials.component.css']
 })
 export class TestimonialsComponent implements OnInit {
-testimonials: any[] = [];
+  
+  testimonials: any[] = [];
 
-// constructor(private http: HttpClient) {
-//   this.fetchTestimonials();
-// }
+  constructor(private http: HttpClient) {}
 
-// fetchTestimonials() {
-//   this.http.get<any[]>('assets/data.json').subscribe(data => {
-//     this.testimonials = data;
-//   });
-// }
-
-constructor(private http: HttpClient) {}
-
-ngOnInit(): void {
-  this.http.get<any[]>('/assets/testimonials.json').subscribe(data => {
-    this.testimonials = data;
-  });
-}
+  ngOnInit(): void {
+    this.http.get<any[]>('/assets/testimonials.json').subscribe(data => {
+      this.testimonials = data;
+    });
+  }
 }
 

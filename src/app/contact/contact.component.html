@@ -8,36 +8,34 @@
 <div class="container">
   <div class="row align-items-center justify-content-center contactContainer">
     <div class="col-6 formContainer">
-      <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="form">
+      <form class="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="form-group">
-          <label for="inputName" class="form-label">Name</label>
-          <input type="text" class="form-control" id="inputName" ngModel name="name" required #name="ngModel">
+          <label class="form-label" for="inputName">Name</label>
+          <input class="form-control" id="inputName" type="text" required ngModel name="name" #name="ngModel">
           <span class="help-block" *ngIf="!name.valid && name.touched">Name is required</span>
         </div>
         <div class="form-group">
-          <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail" ngModel name="email" required email
-            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" #email="ngModel">
-          <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
+          <label class="form-label" for="inputEmail" >E-mail</label>
+          <input class="form-control" id="inputEmail" type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" email required ngModel name="email" #email="ngModel">
+          <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid e-mail</span>
         </div>
         <div class="form-group">
-          <label for="inputPhone" class="form-label">Phone</label>
-          <input type="tel" class="form-control" id="inputPhone" ngModel name="phone" required pattern="[0-9]{9}" #phone="ngModel">
+          <label class="form-label" for="inputPhone">Phone</label>
+          <input class="form-control" id="inputPhone" type="tel" pattern="[0-9]{9}" required ngModel name="phone"   #phone="ngModel">
           <span class="help-block" *ngIf="!phone.valid && phone.touched">Please enter a valid phone number</span>
         </div>
         <div class="form-group">
-          <label for="inputMessage" class="form-label">Write Message</label>
-          <textarea rows="3" class="form-control" id="inputMessage" ngModel name="message" required #message="ngModel"></textarea>
+          <label class="form-label" for="inputMessage">Message</label>
+          <textarea rows="3" class="form-control" id="inputMessage" required ngModel name="message" #message="ngModel"></textarea>
           <span class="help-block" *ngIf="!message.valid && message.touched">Message is required</span>
         </div>
-        <div class="col-12">
-          <button type="submit" class="btn" [disabled]="!f.valid" data-bs-toggle="modal" data-bs-target="#contactModal">SEND</button>
+        <div class="col-12 d-flex align-items-center justify-content-center">
+          <button class="btn" type="submit" [disabled]="!f.valid" data-bs-toggle="modal" data-bs-target="#contactModal">SEND</button>
         </div>
       </form>
     </div>
   </div>
 </div>
-
 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">

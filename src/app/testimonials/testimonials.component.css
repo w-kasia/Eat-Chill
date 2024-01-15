@@ -2,23 +2,22 @@
   margin-top: 40px;
 }
 
-.testimonialsHeading {
+.heading {
   color: var(--green);
   font-family: var(--secondary-font);
   font-size: 40px;
 }
 
-.testimonialsSubheading {
+.subheading {
   font-size: 22px;
 }
 
-.testimonial {
- height: 200px;
-
+.carousel {
+  min-height: 30vh;
 }
 
-.carousel {
-  height: 30vh;
+.testimonial {
+ min-height: 200px;
 }
 
 .carousel-caption h1 {
@@ -28,6 +27,6 @@
 .carousel-indicators > button {
   border-radius: 50%;
   color: var(--green);
-  width: 12px;
-  height: 12px;
+  max-width: 12px;
+  min-height: 12px;
 }

@@ -6,27 +6,27 @@
   background-size: 100vw;
 }
 
-.errorHeading {
+.heading {
   font-size: 130px;
 }
 
-.errorSubheading {
+.subheading {
   font-size: 40px;
 }
 
 .goHomeButton {
   width: 250px;
+  max-width: 100%;
   margin-top: 30px;
   padding: 15px;
   border: none;
-  border-top-left-radius: 28px;
-  border-bottom-right-radius: 28px;
+  border-radius: 28px 0px 28px 0px;
   outline: none;
+  color: var(--black-dark);
+  background-color: var(--green-secondary);
   font-size: 23px;
   font-weight: bold;
   text-transform: uppercase;
-  color: black;
-  background-color: var(--green-secondary);
 }
 
 .goHomeButton:hover {

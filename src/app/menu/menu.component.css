@@ -1,36 +1,31 @@
 .container {
   min-height: 100vh;
 }
-.menuIcon {
-  width: 40px;
-  filter: invert(18%) sepia(15%) saturate(3026%) hue-rotate(117deg) brightness(98%) contrast(105%);
- }
 
 .typeOfFood {
+  max-width: 400px;
+  margin-top: 15px;
   padding: 20px;
   border: 2px solid var(--green);
-  max-width: 400px;
-  cursor: pointer;
-  margin-top: 15px;
-  text-align: center;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   color: var(--green);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .typeOfFood:hover {
   background-color: var(--green-secondary);
 }
-/*
-.menuItems
- {
-  background-color: red;
-  margin-top: 100px;
-  position: fixed;
-  top: 100px;
-  left: 50px;
-  z-index: 999;
-} */
+
+.typeBackground {
+  background-color: var(--green-secondary);
+}
+
+.menuIcon {
+  max-width: 40px;
+  filter: invert(18%) sepia(15%) saturate(3026%) hue-rotate(117deg) brightness(98%) contrast(105%);
+ }
 
  .menuOption {
   margin-top: 10px;
@@ -45,10 +40,6 @@
 }
 
 .dishName {
-  font-size: 23px;
   margin-top: 30px;
-}
-
-.typeBackground {
-  background-color: var(--green-secondary);
+  font-size: 23px;
 }

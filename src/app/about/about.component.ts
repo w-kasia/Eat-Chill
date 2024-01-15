@@ -7,20 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent{
   burgerImage = 'assets/images/burger-image.png';
-//   startValue: number = 0;
-
-//   ngOnInit(): void {
-//     this.startCounting();
-
-//   }
-
-//   startCounting() {
-//   const interval = setInterval(() => {
-//         this.startValue++;
-//         if(this.startValue === 8) {
-//           clearInterval(interval);
-//       }
-//   }, 200);
-// }
-
 }

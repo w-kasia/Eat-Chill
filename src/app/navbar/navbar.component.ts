@@ -7,13 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor(private router: Router) {}
 
   logo = 'assets/logo.png';
-
-  goToReservation() {
-    this.router.navigate(['/reservation']);
-  }
+  
+  constructor(private router: Router) {}
 
   @HostListener('window:scroll', ['$event'])
 

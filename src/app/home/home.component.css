@@ -3,16 +3,6 @@
   min-height: 100vh;
 }
 
-.homeBackgroundImage {
-  background-size: cover;
-
-}
-
-/* .bg-image {
-  background-size: cover;
-} */
-
-
 .bgImageContainer {
   position: relative;
 }
@@ -20,42 +10,39 @@
 .homeBackgroundImage {
   width: 100vw;
   height: 100vh;
+  background-size: cover;
 }
 
-.welcome-text {
+.welcomeTextContainer {
   position: absolute;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
 }
 
-.homeHeading,
-.homeSubheading {
+.heading,
+.subheading {
   color: var(--white);
 }
 
-.homeHeading {
+.heading {
   font-size: 60px;
 }
 
-.homeSubheading {
+.subheading {
   font-size: 40px;
 }
 
 .bookingButton {
-  margin-top: 30px;
   width: 300px;
+  max-width: 100%;
+  margin-top: 30px;
   padding: 15px;
-  background-color: var(--green-secondary);
-  /* #467061 */
-  color: black;
   border: none;
+  border-radius: 28px 0px 28px 0px;
   outline: none;
-  text-transform: uppercase;
+  color: var(--black-dark);
+  background-color: var(--green-secondary);
   font-size: 23px;
   font-weight: bold;
-  border-top-left-radius: 28px;
-  border-bottom-right-radius: 28px;
+  text-transform: uppercase;
 }
 
 .bookingButton:hover {

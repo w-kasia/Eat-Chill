@@ -90,7 +90,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12">
+        <div class="col-12 d-flex justify-content-center align-items-center">
           <button class="submitButton" type="submit" [disabled]="!reservationForm.valid" data-bs-toggle="modal" data-bs-target="#reservationModal">SEND</button>
         </div>
       </form>
@@ -98,7 +98,6 @@
   </div>
 </div>
 
-<!-- Modal -->
 <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -107,7 +106,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Message send successfully! We will contact with you to confirm reservation as soon as possible.
+        Message send successfully! We will contact you via e-mail to confirm reservation as soon as possible.
       </div>
     </div>
   </div>

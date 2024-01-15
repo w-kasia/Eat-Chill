@@ -14,7 +14,6 @@ export class ContactComponent {
   submitMessage = '';
 
   firestore: Firestore = inject(Firestore);
-
   @ViewChild('f') contactForm: any;
 
   saveData(): void {

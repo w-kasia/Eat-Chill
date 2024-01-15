@@ -1,41 +1,38 @@
-.navbar-inverse {
-  background: black;
-  transition: background-color 1s ease;
-}
-.navbar-brand {
-  font-size: 32px;
-  color: var(--orange);
-}
-
- .nav-item
- .nav-link {
-  font-size: 18px;
-  color: var(--white);
-  cursor: pointer;
-  margin-right: 15px;
-}
-
-
 .container {
   padding: 15px;
 }
 
+.navbar-brand {
+  font-size: 32px;
+}
+
+.nav-item
+.nav-link {
+  margin-right: 15px;
+  color: var(--white);
+  font-size: 18px;
+  cursor: pointer;
+}
+
 .contactButton {
-  width: 100px;
+  max-width: 100px;
   padding: 15px;
   border: 2px solid var(--green-secondary);
   outline: none;
   border-radius: 20px;
   overflow: hidden;
+  color: var(--white);
+  background: transparent;
   font-size: 16px;
   text-transform: uppercase;
-  /* background-color: var(--white); */
-  background: transparent;
-  color: var(--white);
-
 }
 
 .contactButton:hover {
-  background-color: var(--green-secondary);
   color: var(--black-dark);
+  background-color: var(--green-secondary);
+}
+
+.navbar-inverse {
+  background-color: var(--green);
+  transition: background-color 1s ease;
 }

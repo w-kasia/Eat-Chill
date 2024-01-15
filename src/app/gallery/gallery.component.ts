@@ -7,7 +7,7 @@ import { Component} from '@angular/core';
 })
 export class GalleryComponent {
 
-  images = ['pizza1.jpg', 'burger1.jpg', 'shrimp.jpg', 'pasta.jpg', 'pancakes.jpg','burger2.jpg', 'pizza2.jpg', 'cake1.jpg', 'cake2.jpg'];
+  images = ['pizza1.jpg', 'burger1.jpg', 'shrimp.jpg', 'pasta.jpg', 'pancakes.jpg', 'burger2.jpg', 'pizza2.jpg', 'cake1.jpg', 'cake2.jpg'];
 
   previewImage = false;
   showMask = false;

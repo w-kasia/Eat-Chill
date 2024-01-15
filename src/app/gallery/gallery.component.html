@@ -14,26 +14,21 @@
     </div>
     <div *ngIf="showMask" class="lightbox">
       <button type="button" (click)="closePreview()" *ngIf="previewImage" class="close-btn" aria-label="close">
-        <img class="closeIcon" src="assets/icons/icon-close.svg" alt="">
+        <img class="closeIcon" src="assets/icons/icon-close.svg" alt="close preview button">
       </button>
-
       <button *ngIf="controls" class="carousel-control-prev btn-control" type="button" data-bs-slide="prev"
         (click)="goToPrev()">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-
       <button class="carousel-control-next btn-control" type="button" data-bs-slide="next" (click)="goToNext()">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-
       <div *ngIf="previewImage" class="lightbox-img">
-        <img class="img-preview" src="assets/images/gallery/{{currentLightboxImage}}" alt="">
+        <img class="img-preview" src="assets/images/gallery/{{currentLightboxImage}}" alt="preview of clicked image">
       </div>
-
     </div>
   </div>
   <app-footer></app-footer>
 </div>
-

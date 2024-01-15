@@ -2,13 +2,13 @@
   margin-top: 40px;
 }
 
-.teamHeading {
+.heading {
   color: var(--green);
   font-family: var(--secondary-font);
   font-size: 40px;
 }
 
-.teamSubheading {
+.subheading {
   font-size: 22px;
 }
 
