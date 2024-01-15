@@ -30,6 +30,7 @@
 .contactButton:hover {
   color: var(--black-dark);
   background-color: var(--green-secondary);
+  transition: all 1s ease;
 }
 
 .navbar-inverse {

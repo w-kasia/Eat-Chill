@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
 
-  homeBackgroundImage = 'assets/images/back.jpg';
+  homeBackgroundImage = 'assets/backgroundpicture.jpg';
+  // homeBackgroundImage = 'assets/images/back.jpg';
 
   constructor(private router: Router) {}
 

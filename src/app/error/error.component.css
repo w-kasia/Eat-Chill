@@ -31,4 +31,5 @@
 
 .goHomeButton:hover {
   border-radius: 0px 28px 0px 28px;
+  transition: all 0.8s ease;
 }
