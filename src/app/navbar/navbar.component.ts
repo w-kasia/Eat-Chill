@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
 
   logo = 'assets/logo.png';
-  
+
   constructor(private router: Router) {}
 
   @HostListener('window:scroll', ['$event'])
