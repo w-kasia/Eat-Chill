@@ -15,7 +15,7 @@
 }
 
 .form {
-  min-height: 90vh;
+  height: 90vh;
   padding: 40px;
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.75);
@@ -26,13 +26,19 @@
   overflow: auto;
 }
 
+.form-group {
+  position: relative;
+  padding-bottom: 18px;
+}
+
 .form-label {
+  margin-top: 8px;
   color: var(--white);
+  font-size: 15px;
 }
 
 .form-control {
-  padding-bottom: 15px;
-  margin-bottom: 8px;
+  padding-bottom: 7px;
   background-color: var(--white);
 }
 
@@ -42,9 +48,11 @@ textarea.ng-invalid.ng-touched {
 }
 
 .help-block {
-  padding-bottom: 5px;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
   color: red;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .btn {
