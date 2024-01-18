@@ -3,7 +3,8 @@
   min-height: 100vh;
   color: var(--white);
   background-image: url(/assets/error.png);
-  background-size: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .heading {
