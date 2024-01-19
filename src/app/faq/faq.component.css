@@ -5,7 +5,7 @@
 
 .heading {
   position: sticky;
-  top: 30%;
+  top: 20%;
   color: var(--green);
   font-size: 46px;
   font-family: var(--secondary-font);
