@@ -17,3 +17,15 @@ margin-bottom: 80px;
 .description {
   margin-left: 10px;
 }
+
+@media (max-width: 480px) {
+  .icon {
+    width: 25px;
+  }
+  .pointHeading {
+    font-size: 25px;
+  }
+  .description {
+    font-size: 14px;
+  }
+}
