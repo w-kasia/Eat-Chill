@@ -37,3 +37,20 @@
   background-color: var(--green);
   transition: background-color 0.5s ease;
 }
+
+@media (max-width: 990px) {
+  .navbar {
+    background-color: var(--green);
+  }
+  .navbar-toggler {
+    order: 3;
+  }
+  .nav-item {
+    order: 2;
+  }
+  .contactButton {
+    max-width: 90px;
+    font-size: 14px;
+  }
+}
+
