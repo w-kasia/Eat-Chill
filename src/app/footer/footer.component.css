@@ -28,3 +28,48 @@
   color: var(--white);
   background-color: transparent;
 }
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    padding-top: 15px;
+  }
+  .footerContainer {
+    flex-direction: column;
+  }
+  .logoSection,
+  .hoursSection,
+  .contactSection {
+    width: 90vw;
+    text-align: center;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    max-width: 90vw;
+    padding-top: 15px;
+  }
+  .footerContainer {
+    flex-direction: column;
+  }
+  .logoSection,
+  .hoursSection,
+  .contactSection {
+    width: 90vw;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .headingContainer h1, h2{
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .footerIcon {
+    width: 22px;
+  }
+}
+
