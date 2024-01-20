@@ -7,3 +7,19 @@
 .subheading {
   font-size: 26px;
 }
+
+@media (max-width: 370px) {
+  .aboutContainer {
+    flex-direction: column;
+  }
+  .heading {
+    font-size: 40px;
+    padding-top: 20px;
+  }
+  .subheading {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+}

@@ -53,10 +53,10 @@
     min-height: 20vh;
   }
   .review {
-    font-size: 18px;
+    font-size: 12px;
   }
   .name {
-    font-size: 12px;
+    font-size: 10px;
   }
   .carousel-indicators > button {
     max-width: 10px;
