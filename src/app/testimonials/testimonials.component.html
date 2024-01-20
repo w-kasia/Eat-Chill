@@ -8,8 +8,8 @@
           <div class="carousel-item testimonial" *ngFor="let testimonial of testimonials; let i = index"
             data-bs-interval="3000" [ngClass]="{'active': i === 0}">
             <div class="carousel-caption">
-              <h1>{{testimonial.review}}</h1>
-              <p>{{testimonial.name}}</p>
+              <h3 class="review">{{testimonial.review}}</h3>
+              <p class="name">{{testimonial.name}}</p>
             </div>
           </div>
         </div>

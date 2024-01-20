@@ -13,15 +13,23 @@
 }
 
 .carousel {
-  min-height: 30vh;
+  min-height: 25vh;
 }
 
 .testimonial {
  min-height: 200px;
 }
 
-.carousel-caption h1 {
-  font-size: 20px;
+.carousel-caption {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.review {
+  font-size: 18px;
 }
 
 .carousel-indicators > button {
@@ -29,4 +37,80 @@
   color: var(--green);
   max-width: 12px;
   min-height: 12px;
+}
+
+@media (max-width: 320px) {
+  .container {
+    margin-top: 0px;
+  }
+  .heading {
+    font-size: 38px;
+  }
+  .subheading {
+    font-size: 22px;
+  }
+  .carousel {
+    min-height: 20vh;
+  }
+  .review {
+    font-size: 18px;
+  }
+  .name {
+    font-size: 12px;
+  }
+  .carousel-indicators > button {
+    max-width: 10px;
+    min-height: 10px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+  .container {
+    margin-top: 0px;
+  }
+  .heading {
+    font-size: 30px;
+  }
+  .subheading {
+    font-size: 18px;
+  }
+  .carousel {
+    min-height: 20vh;
+  }
+  .review {
+    font-size: 12px;
+  }
+  .name {
+    font-size: 9px;
+  }
+  .carousel-indicators > button {
+    max-width: 10px;
+    min-height: 10px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .review {
+    font-size: 13px;
+  }
+  .name {
+    font-size: 12px;
+  }
+  .carousel {
+    min-height: 20vh;
+  }
+  .carousel-indicators > button {
+    max-width: 10px;
+    min-height: 10px;
+  }
+}
+@media (min-width: 769px) and (max-width: 995px) {
+  .review {
+    font-size: 17px;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .carousel {
+    min-height: 20vh;
+  }
 }
