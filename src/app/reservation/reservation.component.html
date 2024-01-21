@@ -48,8 +48,6 @@
                 <label for="date" class="form-label">Date</label>
                 <input type="date" class="form-control" id="date" formControlName="date"
                   min="{{currentDate | date: 'yyyy-MM-dd'}}">
-                <!-- <input type="time" class="form-control" id="time" formControlName="time"
-          min="{{currentTime | date: 'shortTime'}}" > -->
                 <small
                   *ngIf="!reservationForm.get('reservationDetails.date')?.valid && reservationForm.get('reservationDetails.date')?.touched"
                   class="help-block">Choose a date
