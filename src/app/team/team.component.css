@@ -32,5 +32,20 @@
   .chefName {
     font-size: 15px;
   }
-
+}
+@media (max-width: 789px) {
+  .chefsSection {
+    width: 100vw;
+    flex-direction: column;
+  }
+  .chefContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .imageOfChef {
+    width: 400px;
+  }
 }
