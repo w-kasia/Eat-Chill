@@ -37,18 +37,28 @@
   .footerContainer {
     flex-direction: column;
   }
+  .headingContainer h1, h2{
+    font-size: 16px;
+  }
   .logoSection,
   .hoursSection,
   .contactSection {
     width: 90vw;
-    text-align: center;
+  }
+  p {
+    font-size: 12px;
+  }
+  .footerIcon {
+    width: 25px;
   }
 }
-
 @media (min-width: 481px) and (max-width: 768px) {
   .container {
     max-width: 90vw;
     padding-top: 15px;
+  }
+  .headingContainer h1, h2{
+    font-size: 20px;
   }
   .footerContainer {
     flex-direction: column;
@@ -57,11 +67,18 @@
   .hoursSection,
   .contactSection {
     width: 90vw;
-    text-align: center;
+  }
+  p {
+    font-size: 14px;
+  }
+  .footerIcon {
+    width: 30px;
   }
 }
-
 @media (min-width: 769px) and (max-width: 990px) {
+  .headingContainer h1, h2{
+    font-size: 22px;
+  }
   .headingContainer h1, h2{
     font-size: 16px;
   }
@@ -72,4 +89,3 @@
     width: 20px;
   }
 }
-
