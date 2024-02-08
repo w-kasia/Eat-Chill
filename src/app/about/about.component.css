@@ -8,8 +8,16 @@
   font-size: 26px;
 }
 
-@media (max-width: 370px) {
+@media (max-width: 768px) {
   .aboutContainer {
+    flex-direction: column;
+  }
+  .imgContainer,
+  .descriptionContainer {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
   .heading {
@@ -21,5 +29,8 @@
   }
   p {
     font-size: 14px;
+  }
+  .burgerImg {
+    width: 200px;
   }
 }
