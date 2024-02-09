@@ -79,6 +79,6 @@
 }
 @media (min-width: 481px) and (max-width: 990px) {
   .navbar {
-    padding-right: 10px;
+    padding-right: 15px;
   }
 }
