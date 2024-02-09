@@ -1,13 +1,17 @@
-.navbar-brand {
-  font-size: 32px;
+.navbar {
+  min-height: 12vh;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.nav-item
-.nav-link {
-  margin-right: 15px;
-  color: var(--white);
-  font-size: 18px;
-  cursor: pointer;
+.offcanvas {
+  background-color: var(--green);
+  z-index: 100001;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
 }
 
 .navbar-toggler:focus,
@@ -18,18 +22,25 @@
   box-shadow: none;
 }
 
+.nav-item,
+.nav-link {
+  color: var(--white)!important;
+  font-size: 18px;
+  cursor: pointer;
+}
 
-.offcanvas {
-  background-color: var(--green);
-  z-index: 100001;
+.nav-item:hover,
+.nav-link:hover {
+  color: var(--green-secondary)!important;
+  transition: all 0.8s ease;
 }
 
 .contactButton {
   max-width: 100px;
   padding: 15px;
   border: 2px solid var(--green-secondary);
-  outline: none;
   border-radius: 20px;
+  outline: none;
   overflow: hidden;
   color: var(--white);
   background: transparent;
@@ -40,38 +51,34 @@
 .contactButton:hover {
   color: var(--black-dark);
   background-color: var(--green-secondary);
-  transition: all 1s ease;
+  transition: all 0.5s ease-in-out;
 }
 
 .navbar-inverse {
   background-color: var(--green);
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease;
 }
 
-
-.navbar {
-  padding-left: 20px;
-  padding-right: 20px;
-  min-height: 12vh;
-}
-.navbar-toggler {
-  border: none;
-  outline: none;
-}
-
-/* @media (max-width: 990px) {
+@media (max-width: 480px) {
   .navbar {
-    background-color: var(--green);
+    padding-right: 10px;
   }
-  .navbar-toggler {
-    order: 3;
+  .logo {
+    width: 130px;
   }
-  .nav-item {
-    order: 2;
+  .navbar-toggler,
+  .btn-close {
+   width: 20px;
   }
   .contactButton {
-    max-width: 90px;
-    font-size: 14px;
+    max-width: 80px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 12px;
   }
-} */
-
+}
+@media (min-width: 481px) and (max-width: 990px) {
+  .navbar {
+    padding-right: 10px;
+  }
+}
