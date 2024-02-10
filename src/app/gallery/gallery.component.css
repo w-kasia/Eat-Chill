@@ -3,18 +3,10 @@
   padding: 80px 0;
 }
 
-img {
+.imageOfDish {
   max-width: 100%;
   min-height: 100%;
-}
-
- .imageOfDish {
   border-radius: 10px;
-}
-
-.imageOfDish:hover {
-  transform: scale(1.1);
-  transition: 0.5s ease-in-out;
 }
 
 .lightbox {
@@ -60,72 +52,38 @@ img {
   filter: invert(98%) sepia(7%) saturate(7485%) hue-rotate(180deg) brightness(110%) contrast(111%);
 }
 
-/* @media (max-width: 320px) {
-  .dishRow {
-    width: 100vw;
-    flex-direction: column;
-  }
-  .dishCol {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .imageOfDish {
-    width: 250px;
-    height: 350px;
-  }
-  .imageOfDish:hover {
-    transform: none;
-  }
+@media (max-width: 576px) {
   .lightbox {
     display: none;
   }
 }
-@media (min-width: 321px) and (max-width: 560px) {
-  .dishRow {
-    width: 100vw;
-    flex-direction: column;
-  }
-  .dishCol {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .imageOfDish {
-    width: 300px;
-    height: 400px;
-  }
-  .imageOfDish:hover {
-    transform: none;
-  }
+@media (min-width: 577px) and (max-width: 768px) {
   .lightbox {
-    display: none;
+    top: 0px;
+    bottom: -30px;
+  }
+  .img-preview {
+    height: 60vh;
+  }
+  .carousel-control-prev {
+    left: 40px;
+  }
+  .carousel-control-next {
+    right: 40px;
   }
 }
-@media (min-width: 561px) and (max-width: 769px) {
-  .dishRow {
-    width: 100vw;
-    flex-direction: column;
-  }
-  .dishCol {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .imageOfDish {
-    width: 350px;
-    height: 450px;
-  }
-  .imageOfDish:hover {
-    transform: none;
-  }
+@media (min-width: 769px) and (max-width: 900px) {
   .lightbox {
-    display: none;
+    top: 0px;
+    bottom: -30px;
   }
-} */
+  .img-preview {
+    height: 60vh;
+  }
+  .carousel-control-prev {
+    left: 35px;
+  }
+  .carousel-control-next {
+    right: 35px;
+  }
+}
