@@ -19,4 +19,5 @@ export class MenuComponent {
   toggleSection(index: number) {
     this.activeOptionIndex = index;
   }
+
 }

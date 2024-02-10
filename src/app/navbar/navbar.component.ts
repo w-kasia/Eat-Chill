@@ -26,4 +26,5 @@ export class NavbarComponent {
   toAbout() {
     document.getElementById('aboutSection')?.scrollIntoView({behavior: 'smooth'});
   }
+
 }

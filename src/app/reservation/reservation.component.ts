@@ -14,14 +14,7 @@ export class ReservationComponent implements OnInit{
 
   occasions: string[] = ['Eat & Chill', 'Birthday', 'Annivarsary', 'Business meeting'];
 
-
-  // maxDate: any = '2024-01-01';
-
-  //czas nie działa w firefox, poprawić
   currentDate: any = new Date();
-  // currentTime: any = this.currentDate.getHours() + ":" + this.currentDate.getMinutes();
-
-  // currentTime: any = this.currentDate;
 
   ngOnInit() {
     this.reservationForm = new FormGroup({
