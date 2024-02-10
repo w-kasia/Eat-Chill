@@ -64,7 +64,7 @@ textarea.ng-invalid.ng-touched {
   cursor: pointer;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
   .formContainer {
     width: 100vh;
     display: flex;
@@ -75,6 +75,20 @@ textarea.ng-invalid.ng-touched {
     height: 80vh;
     min-height: 100%;
     max-width: 90vw;
+    padding: 15px;
+  }
+}
+@media (min-width: 321px) and (max-width: 780px) {
+  .formContainer {
+    width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form {
+    height: 80vh;
+    min-height: 100%;
+    width: 70vw;
     padding: 15px;
   }
 }

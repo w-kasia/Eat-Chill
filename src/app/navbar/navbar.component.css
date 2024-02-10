@@ -56,13 +56,10 @@
 
 .navbar-inverse {
   background-color: var(--green);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 @media (max-width: 480px) {
-  .navbar {
-    padding-right: 10px;
-  }
   .logo {
     width: 130px;
   }
@@ -77,8 +74,4 @@
     font-size: 12px;
   }
 }
-@media (min-width: 481px) and (max-width: 990px) {
-  .navbar {
-    padding-right: 15px;
-  }
-}
+
