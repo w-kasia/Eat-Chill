@@ -32,19 +32,16 @@ The main aim of this project was to create a dynamic and user-friendly restauran
 
 <h4>⭐Some interesting features</h4>
 
-<b>📕Works Section</b></br>
-In this section, you'll find list of poems fetched from an open API. You can explore a variety of works. Additionally, there's a search input feature that allows you to easily search for specific works by titles. Simply enter a keyword or title in the search input, and the component will dynamically filter and display the relevant works.</br>
+<b>Reservation Form</b></br>
+I used reactive forms for that section and Firestore for data storage.</br>
 <img src="https://github.com/w-kasia/Eat-Chill/assets/121196574/67b94fbd-602e-448e-9b0b-430e7c4f625c" width="700">
 
-<b>💬Contact Form</b></br>
-In this section, I've implemented template-driven forms. When a user fills out the form and submits it, the data is sent to Firestore, ensuring that I receive that message promptly.</br>
+<b>Contact Form</b></br>
+The contact form is built using a template-driven approach. I use Firestore to store and manage the messages.</br>
 <img src="https://github.com/w-kasia/Eat-Chill/assets/121196574/b557638d-ccfa-4916-8f07-b9aa06b77df9" width="700">
 
-<b>💡FAQ Section</b></br>
-This section was built with Angular Material and it provides answers to some interesting questions about poet. It offers a user-friendly interface with an intuitive design, making it easy for users to navigate through the questions and find information they need.</br>
-<img src="https://github.com/w-kasia/Eat-Chill/assets/121196574/a8264b22-5577-441b-af55-28de14253bb8" width="700">
 
 
-💻📱The website is designed to be fully responsive. 
+💻📱The website is designed to be fully responsive.
 
 👉If you have any suggestions, feel free to contact me via email: kwaszczuk.contact@gmail.com
