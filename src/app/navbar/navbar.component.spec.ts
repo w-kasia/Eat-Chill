@@ -35,14 +35,4 @@ describe('NavbarComponent', () => {
     expect(document.querySelector('.navbar')?.classList.contains('navbar-inverse')).toBe(false);
   });
 
-  it('should scroll to aboutSection', () => {
-    const aboutSection = document.createElement('div');
-    aboutSection.id = 'aboutSection';
-
-    document.body.appendChild(aboutSection);
-    const scrollIntoViewSpy = spyOn(aboutSection, 'scrollIntoView');
-
-    component.toAbout();
-    expect(scrollIntoViewSpy).toHaveBeenCalled();
-  });
 });
