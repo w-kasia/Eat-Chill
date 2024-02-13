@@ -10,10 +10,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TeamComponent } from './team/team.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';           
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { PointsComponent } from './points/points.component';
-import { NgOptimizedImage } from '@angular/common';        
+import { NgOptimizedImage } from '@angular/common';
+import { MenuService } from './menu.service';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBKE2TEyOQoVsBP961Qg5o35fWrHnKJh04",
@@ -48,7 +49,7 @@ const firebaseConfig = {
     HttpClientModule,
     NgOptimizedImage
   ],
-  providers: [],
+  providers: [MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
