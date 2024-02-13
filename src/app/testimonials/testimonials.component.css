@@ -39,6 +39,11 @@
   min-height: 12px;
 }
 
+.errorMessage {
+  text-align: center;
+  color: red;
+}
+
 @media (max-width: 320px) {
   .container {
     margin-top: 0px;

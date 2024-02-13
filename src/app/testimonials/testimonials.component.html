@@ -3,6 +3,9 @@
     <div class="col-12 text-center">
       <h1 class="heading">Testimonials</h1>
       <h2 class="subheading">Happy Customers</h2>
+      <div *ngIf="errorMessage" class="errorMessage">
+        {{ errorMessage }}
+      </div>
       <div id="carouselTestimonials" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item testimonial" *ngFor="let testimonial of testimonials; let i = index"
