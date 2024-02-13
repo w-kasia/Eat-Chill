@@ -14,7 +14,7 @@ export class TestimonialsComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>('./assets/testimonialss.json').subscribe(data => {
+    this.http.get<any[]>('./assets/testimonials.json').subscribe(data => {
       this.testimonials = data;
     },
     error => {
