@@ -9,7 +9,7 @@ export class PointsComponent {
 
   points: any = [
     { heading: 'Master Chefs',
-      description: 'We have top chefs in our team. They will prepare a masterpiece for you.',
+      description: 'We have top chefs on our team. They will prepare a masterpiece for you.',
       src: 'assets/icons/icon-chef.svg',
       alt: 'Icon of chef'},
       { heading: 'Quality Food',
@@ -28,7 +28,7 @@ export class PointsComponent {
       description: 'We love artistic events. Guests can listen to live music every Friday and Saturday.',
       src: 'assets/icons/icon-party.svg'},
       { heading: 'Pets',
-      description: 'We are pet-friendly place. You can visit our restaurant with your dog.',
+      description: 'We are a pet-friendly place. You can visit our restaurant with your dog.',
       src: 'assets/icons/icon-pet.svg',
       alt: 'Icon of pet'}
   ];
