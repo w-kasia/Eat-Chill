@@ -28,6 +28,24 @@
   font-size: 20px;
 }
 
+.fadeInTop {
+  -webkit-animation: fadeInTop 0.8s both;
+  -moz-animation: fadeInTop 0.8s both;
+  -o-animation: fadeInTop 0.8s both;
+  animation: fadeInTop 0.8s both;
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(350px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 480px) {
   .chefName {
     font-size: 15px;

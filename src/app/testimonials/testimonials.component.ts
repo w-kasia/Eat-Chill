@@ -21,6 +21,32 @@ export class TestimonialsComponent implements OnInit {
         console.log('Error fetchnig json data in Testimonials Component');
         this.errorMessage = 'Sorry, we can not display testimonials now. Try again later.'
     });
+
+    const headings = document.querySelectorAll('h1');
+    const subheadings = document.querySelectorAll('h2');
+
+     const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    }
+
+     const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fadeInTop');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    headings.forEach(heading => {
+      observer.observe(heading);
+    });
+    subheadings.forEach(subheading => {
+      observer.observe(subheading);
+    });
   }
+
 }
 

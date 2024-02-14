@@ -32,5 +32,4 @@ export class PointsComponent {
       src: 'assets/icons/icon-pet.svg',
       alt: 'Icon of pet'}
   ];
-
 }
