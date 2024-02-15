@@ -31,7 +31,7 @@ body {
 }
 
 .navbarContainer {
-  min-height: 15vh;
+  min-height: 12vh;
   background-color: var(--green);
   margin-bottom: 20px;
 }
