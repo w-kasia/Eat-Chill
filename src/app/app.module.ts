@@ -14,6 +14,7 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { PointsComponent } from './points/points.component';
 import { MenuService } from './menu.service';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBKE2TEyOQoVsBP961Qg5o35fWrHnKJh04",
@@ -45,7 +46,8 @@ const firebaseConfig = {
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    LazyLoadImageModule
   ],
   providers: [MenuService],
   bootstrap: [AppComponent]

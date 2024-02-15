@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 
   homeBackgroundImage = 'assets/backgroundpicture.jpg';
+  restaurantImage = 'assets/images/flowers.jpg';
 
   constructor(private router: Router) {}
 
