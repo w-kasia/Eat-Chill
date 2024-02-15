@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class FaqComponent {
 
+  restaurantImage = 'assets/images/couple.jpg';
+
   constructor(private router: Router) {}
 
   goToContact() {
