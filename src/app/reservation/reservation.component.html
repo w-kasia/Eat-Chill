@@ -14,28 +14,28 @@
             <div class="row clientDataContainer">
               <div class="form-group col-6">
                 <label for="name" class="form-label">First name</label>
-                <input type="text" class="form-control" id="name" formControlName="name">
+                <input type="text" label="name" class="form-control" id="name" formControlName="name">
                 <small
                   *ngIf="!reservationForm.get('clientData.name')?.valid && reservationForm.get('clientData.name')?.touched"
                   class="help-block">First name is required</small>
               </div>
               <div class="form-group col-6">
                 <label for="surname" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="surname" formControlName="surname">
+                <input type="text" label="surname" class="form-control" id="surname" formControlName="surname">
                 <small
                   *ngIf="!reservationForm.get('clientData.surname')?.valid && reservationForm.get('clientData.surname')?.touched"
                   class="help-block">Last name is required</small>
               </div>
               <div class="form-group col-6">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" formControlName="email">
+                <input type="email" label="email" class="form-control" id="email" formControlName="email">
                 <small
                   *ngIf="!reservationForm.get('clientData.email')?.valid && reservationForm.get('clientData.email')?.touched"
                   class="help-block">Please enter a valid e-mail</small>
               </div>
               <div class="form-group col-6">
                 <label for="phone" class="form-label">Phone</label>
-                <input type="tel" class="form-control" id="phone" formControlName="phone">
+                <input type="tel" label="phone" class="form-control" id="phone" formControlName="phone">
                 <small
                   *ngIf="!reservationForm.get('clientData.phone')?.valid && reservationForm.get('clientData.phone')?.touched"
                   class="help-block">Please enter a valid phone number</small>
@@ -46,7 +46,7 @@
             <div class="row reservationDetailsContainer">
               <div class="form-group col-3">
                 <label for="date" class="form-label">Date</label>
-                <input type="date" class="form-control" id="date" formControlName="date"
+                <input type="date" label="date" class="form-control" id="date" formControlName="date"
                   min="{{currentDate | date: 'yyyy-MM-dd'}}">
                 <small
                   *ngIf="!reservationForm.get('reservationDetails.date')?.valid && reservationForm.get('reservationDetails.date')?.touched"
@@ -55,7 +55,7 @@
               </div>
               <div class="form-group col-3">
                 <label for="time" class="form-label">Time</label>
-                <input type="time" class="form-control" id="time" formControlName="time">
+                <input type="time" label="time" class="form-control" id="time" formControlName="time">
                 <small
                   *ngIf="!reservationForm.get('reservationDetails.time')?.valid && reservationForm.get('reservationDetails.time')?.touched"
                   class="help-block">Choose time(10-22)
@@ -63,7 +63,7 @@
               </div>
               <div class="select col-2">
                 <label for="guests" class="form-label">Guests</label>
-                <input type="number" class="form-control" id="input1" placeholder="enter amount" max="10" min="1"
+                <input type="number" label="guests" class="form-control" id="input1" placeholder="enter amount" max="10" min="1"
                   formControlName="numbers">
                 <small
                   *ngIf="!reservationForm.get('reservationDetails.numbers')?.valid && reservationForm.get('reservationDetails.numbers')?.touched"

@@ -11,22 +11,22 @@
       <form class="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="form-group">
           <label class="form-label" for="inputName">Name</label>
-          <input class="form-control" id="inputName" type="text" required ngModel name="name" #name="ngModel">
+          <input class="form-control" id="inputName" type="text" label="name" required ngModel name="name" #name="ngModel">
           <span class="help-block" *ngIf="!name.valid && name.touched">Name is required</span>
         </div>
         <div class="form-group">
           <label class="form-label" for="inputEmail" >E-mail</label>
-          <input class="form-control" id="inputEmail" type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" email required ngModel name="email" #email="ngModel">
+          <input class="form-control" id="inputEmail" type="email" label="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" email required ngModel name="email" #email="ngModel">
           <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid e-mail</span>
         </div>
         <div class="form-group">
           <label class="form-label" for="inputPhone">Phone</label>
-          <input class="form-control" id="inputPhone" type="tel" pattern="[0-9]{9}" required ngModel name="phone"   #phone="ngModel">
+          <input class="form-control" id="inputPhone" type="tel" label="phone" pattern="[0-9]{9}" required ngModel name="phone"   #phone="ngModel">
           <span class="help-block" *ngIf="!phone.valid && phone.touched">Please enter a valid phone number</span>
         </div>
         <div class="form-group">
           <label class="form-label" for="inputMessage">Message</label>
-          <textarea rows="3" class="form-control" id="inputMessage" required ngModel name="message" #message="ngModel"></textarea>
+          <textarea rows="3" class="form-control" id="inputMessage" label="message" required ngModel name="message" #message="ngModel"></textarea>
           <span class="help-block" *ngIf="!message.valid && message.touched">Message is required</span>
         </div>
         <div class="col-12 d-flex align-items-center justify-content-center">

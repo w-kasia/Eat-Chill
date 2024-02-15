@@ -13,7 +13,6 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { PointsComponent } from './points/points.component';
-import { NgOptimizedImage } from '@angular/common';
 import { MenuService } from './menu.service';
 
 const firebaseConfig = {
@@ -46,8 +45,7 @@ const firebaseConfig = {
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    NgOptimizedImage
+    HttpClientModule
   ],
   providers: [MenuService],
   bootstrap: [AppComponent]

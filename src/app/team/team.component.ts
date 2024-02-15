@@ -12,7 +12,6 @@ export class TeamComponent implements OnInit{
   ImageOfChefThird = 'assets/images/chef2.jpg';
 
   ngOnInit() {
-    const imagesOfChef = document.querySelectorAll('.imageOfChef');
     const chefsName = document.querySelectorAll('.chefName');
 
      const options = {
@@ -30,12 +29,8 @@ export class TeamComponent implements OnInit{
       });
     }, options);
 
-    imagesOfChef.forEach(imageOfChef => {
-      observer.observe(imageOfChef);
-    });
     chefsName.forEach(chefName => {
       observer.observe(chefName);
     });
   }
-
 }
