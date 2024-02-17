@@ -4,7 +4,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
-import { By } from '@angular/platform-browser';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 describe('FaqComponent', () => {
   let component: FaqComponent;
@@ -14,7 +14,7 @@ describe('FaqComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [FaqComponent, NavbarComponent, FooterComponent],
-      imports: [RouterTestingModule]
+      imports: [RouterTestingModule, LazyLoadImageModule]
     });
     fixture = TestBed.createComponent(FaqComponent);
     component = fixture.componentInstance;

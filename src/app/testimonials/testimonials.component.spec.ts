@@ -26,15 +26,23 @@ describe('TestimonialsComponent', () => {
   });
 
   it('should fetch testimonials from json file', () => {
-    const mockTestimonials = [
-      { review: 'Test Review', name: 'Tom'},
-      { review: 'Test Review', name: 'Mary'},
-    ];
+    const mockTestimonials = [{ review: 'Test Review', name: 'Tom'}];
 
     component.ngOnInit();
     const req = httpMock.expectOne('/assets/testimonials.json');
     expect(req.request.method).toBe('GET');
     req.flush(mockTestimonials);
     expect(component.testimonials).toEqual(mockTestimonials);
+  });
+
+  it('should handle error when fetching testimonials from json file',() => {
+    spyOn(console, 'log');
+    const mockError = new ErrorEvent('error');
+    component.ngOnInit();
+    const requestError = httpMock.expectOne('/assets/testimonials.json');
+    expect(requestError.request.method).toBe('GET');
+    requestError.error(mockError);
+    expect(console.log).toHaveBeenCalledWith('Error fetching json data in Testimonials Component');
+    expect(component.errorMessage).toEqual('Sorry, we can not display testimonials now. Try again later.')
   })
 });

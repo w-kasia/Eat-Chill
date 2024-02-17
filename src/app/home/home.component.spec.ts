@@ -8,6 +8,7 @@ import { PointsComponent } from '../points/points.component';
 import { TeamComponent } from '../team/team.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { Router } from '@angular/router';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -16,7 +17,7 @@ describe('HomeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [HttpClientTestingModule, LazyLoadImageModule],
       declarations: [HomeComponent, NavbarComponent, FooterComponent, TestimonialsComponent, AboutComponent, PointsComponent, TeamComponent]
     });
     fixture = TestBed.createComponent(HomeComponent);
