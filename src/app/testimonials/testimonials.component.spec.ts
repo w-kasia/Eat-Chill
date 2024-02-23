@@ -29,7 +29,7 @@ describe('TestimonialsComponent', () => {
     const mockTestimonials = [{ review: 'Test Review', name: 'Tom'}];
 
     component.ngOnInit();
-    const req = httpMock.expectOne('/assets/testimonials.json');
+    const req = httpMock.expectOne('./assets/testimonials.json');
     expect(req.request.method).toBe('GET');
     req.flush(mockTestimonials);
     expect(component.testimonials).toEqual(mockTestimonials);
@@ -39,7 +39,7 @@ describe('TestimonialsComponent', () => {
     spyOn(console, 'log');
     const mockError = new ErrorEvent('error');
     component.ngOnInit();
-    const requestError = httpMock.expectOne('/assets/testimonials.json');
+    const requestError = httpMock.expectOne('./assets/testimonials.json');
     expect(requestError.request.method).toBe('GET');
     requestError.error(mockError);
     expect(console.log).toHaveBeenCalledWith('Error fetching json data in Testimonials Component');
