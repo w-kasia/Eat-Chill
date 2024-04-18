@@ -3,7 +3,7 @@
   "compilerOptions": {
     "strictPropertyInitialization": false,
     "baseUrl": "./",
-    "outDir": "./dist",
+    "outDir": "./dist/baczynski",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": false,
